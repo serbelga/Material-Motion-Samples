@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <font
+        android:font="@font/metropolis_medium"
+        android:fontWeight="500">
+    </font>
+    <font
+        android:font="@font/metropolis_regular"
+        android:fontWeight="400">
+    </font>
+    <font
+        android:font="@font/metropolis_semibold"
+        android:fontWeight="600">
+    </font>
+</font-family>

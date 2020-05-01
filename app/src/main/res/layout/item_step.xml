@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="8dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageButton
+            android:id="@+id/step_button"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/step_selector" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/step_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:textAlignment="center"
+            android:textColor="@color/step_selector"
+            tools:text="1" />
+    </FrameLayout>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="1px"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp"
+        android:background="?attr/colorControlNormal" />
+</LinearLayout>
