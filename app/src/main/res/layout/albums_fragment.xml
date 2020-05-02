@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".music.AlbumsFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam convallis diam in turpis aliquet facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elementum commodo libero sit amet tempus. Donec commodo sapien id congue convallis. Pellentesque lobortis mi id congue lacinia. Maecenas id pretium sapien. Suspendisse interdum semper purus, at elementum tortor eleifend congue. Cras at lorem vitae urna finibus convallis et vehicula turpis. Praesent quam ligula, blandit quis convallis a, tincidunt in dolor. Morbi ultrices ullamcorper suscipit. Aliquam id dui at magna consequat aliquet.
+
+Aenean auctor dolor nunc, quis efficitur massa lobortis eget. Praesent faucibus gravida hendrerit. In commodo nunc vestibulum mauris interdum posuere. Aenean a cursus dolor, non faucibus justo. Nullam accumsan justo sit amet mi vehicula, id rutrum neque porttitor. Vestibulum blandit metus vel libero luctus sagittis. Mauris id dictum arcu, a hendrerit urna. Maecenas luctus diam vitae purus ultrices, eget scelerisque neque tristique. Quisque fermentum lorem vel faucibus dictum. Pellentesque a leo ac lectus tincidunt cursus. Sed hendrerit mauris ut volutpat cursus. Nam congue ante in eros vehicula, id euismod sem sollicitudin." />
+
+</FrameLayout>

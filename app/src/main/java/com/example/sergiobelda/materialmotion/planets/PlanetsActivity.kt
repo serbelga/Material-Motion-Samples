@@ -1,20 +1,20 @@
-package com.example.sergiobelda.materialmotion.sharedaxis
+package com.example.sergiobelda.materialmotion.planets
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sergiobelda.materialmotion.R
-import com.example.sergiobelda.materialmotion.databinding.SharedAxisYActivityBinding
+import com.example.sergiobelda.materialmotion.databinding.PlanetsActivityBinding
 import com.google.android.material.transition.MaterialSharedAxis
 
-class SharedAxisYActivity : AppCompatActivity() {
-    private lateinit var binding: SharedAxisYActivityBinding
+class PlanetsActivity : AppCompatActivity() {
+    private lateinit var binding: PlanetsActivityBinding
     private var selected = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = SharedAxisYActivityBinding.inflate(layoutInflater)
+        binding = PlanetsActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setSupportActionBar(binding.toolbar)

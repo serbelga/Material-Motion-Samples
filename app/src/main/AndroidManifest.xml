@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".sharedaxis.SharedAxisYActivity"></activity>
+        <activity android:name=".email.EmailActivity"></activity>
+        <activity android:name=".music.MusicActivity" />
+        <activity android:name=".planets.PlanetsActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,4 +22,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>

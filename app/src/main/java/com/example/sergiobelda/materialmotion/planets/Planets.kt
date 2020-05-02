@@ -1,4 +1,4 @@
-package com.example.sergiobelda.materialmotion.sharedaxis
+package com.example.sergiobelda.materialmotion.planets
 
 data class Planet(
     val id: Int,

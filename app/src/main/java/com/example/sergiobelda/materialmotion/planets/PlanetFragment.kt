@@ -1,4 +1,4 @@
-package com.example.sergiobelda.materialmotion.sharedaxis
+package com.example.sergiobelda.materialmotion.planets
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

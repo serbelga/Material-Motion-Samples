@@ -1,4 +1,4 @@
-* Container Transform: Card into Fragment, Item List into Fragment, FAB to Dialog (Interpolator) + CubicBezier
-* SharedAxis: Stepper
-* Fade through: Navigation
-* Fade: Dialog
+* Planets: Shared Axis
+* Music: Fade Through, Card Container Transformation, FAB Transformation
+* Email: Fade FAB, FAB Transformation
+* Notes: FAB Transformation

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/artistsFragment">
+
+    <fragment
+        android:id="@+id/artistsFragment"
+        android:name="com.example.sergiobelda.materialmotion.music.ArtistsFragment"
+        android:label="artists_fragment"
+        tools:layout="@layout/artists_fragment" />
+    <fragment
+        android:id="@+id/albumsFragment"
+        android:name="com.example.sergiobelda.materialmotion.music.AlbumsFragment"
+        android:label="albums_fragment"
+        tools:layout="@layout/albums_fragment" />
+    <fragment
+        android:id="@+id/playlistsFragment"
+        android:name="com.example.sergiobelda.materialmotion.music.PlaylistsFragment"
+        android:label="playlists_fragment"
+        tools:layout="@layout/playlists_fragment" />
+</navigation>

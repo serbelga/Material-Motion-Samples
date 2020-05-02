@@ -9,26 +9,20 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/fade_through"
+        android:id="@+id/solar_system"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fade through"/>
+        android:text="Solar System"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/fade"
+        android:id="@+id/music"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fade"/>
+        android:text="Music"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/shared_axis"
+        android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Shared Axis"/>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/container_transform"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Container Transform"/>
+        android:text="Email"/>
 </LinearLayout>

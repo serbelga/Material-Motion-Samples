@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">MaterialMotion</string>
+    <string name="artists">Artists</string>
+    <string name="albums">Albums</string>
+    <string name="playlists">Playlists</string>
 
     <string-array name="planets_array">
         <item>Mercury</item>
@@ -7,4 +10,6 @@
         <item>Earth</item>
         <item>Mars</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

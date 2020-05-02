@@ -4,7 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.sergiobelda.materialmotion.databinding.MainActivityBinding
-import com.example.sergiobelda.materialmotion.sharedaxis.SharedAxisYActivity
+import com.example.sergiobelda.materialmotion.email.EmailActivity
+import com.example.sergiobelda.materialmotion.music.MusicActivity
+import com.example.sergiobelda.materialmotion.planets.PlanetsActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: MainActivityBinding
@@ -14,8 +16,16 @@ class MainActivity : AppCompatActivity() {
         binding = MainActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.sharedAxis.setOnClickListener {
-            val intent = Intent(this, SharedAxisYActivity::class.java)
+        binding.solarSystem.setOnClickListener {
+            val intent = Intent(this, PlanetsActivity::class.java)
+            startActivity(intent)
+        }
+        binding.music.setOnClickListener {
+            val intent = Intent(this, MusicActivity::class.java)
+            startActivity(intent)
+        }
+        binding.email.setOnClickListener {
+            val intent = Intent(this, EmailActivity::class.java)
             startActivity(intent)
         }
     }
