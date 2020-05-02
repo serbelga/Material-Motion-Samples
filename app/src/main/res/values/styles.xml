@@ -13,17 +13,9 @@
         <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.LargeComponent</item>
 
         <item name="textAppearanceBody1">@style/TextAppearance.Body1</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.Subtitle2</item>
         <item name="textAppearanceButton">@style/TextAppearance.Button</item>
         <item name="textAppearanceHeadline6">@style/TextAppearance.Headline6</item>
-    </style>
-
-    <style name="TextAppearance.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
-        <item name="fontFamily">@font/metropolis_semibold</item>
-    </style>
-    <style name="TextAppearance.Button" parent="TextAppearance.MaterialComponents.Button">
-        <item name="fontFamily">@font/metropolis_medium</item>
-    </style>
-    <style name="TextAppearance.Body1" parent="TextAppearance.MaterialComponents.Body1">
-        <item name="fontFamily">@font/metropolis_regular</item>
     </style>
 </resources>

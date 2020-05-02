@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="message"
+            type="com.example.sergiobelda.materialmotion.email.Message" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="81dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="4dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                app:shapeAppearance="@style/ShapeAppearance.ImageView"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                app:image_url="@{message.contact.image}"
+                tools:src="@tools:sample/avatars" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="4dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="?attr/textAppearanceSubtitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/material_on_surface_emphasis_high_type"
+                        android:text="@{message.contact.name}"
+                        tools:text="@tools:sample/first_names" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="?attr/textAppearanceSubtitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:textColor="@color/material_on_surface_emphasis_medium"
+                        android:text="@{message.contact.email}"
+                        tools:text="mail@mail.com" />
+                </LinearLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="?attr/textAppearanceSubtitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:textColor="@color/material_on_surface_emphasis_medium"
+                    android:text="@{message.body}"
+                    tools:text="@tools:sample/lorem" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="92dp"
+            android:background="@color/colorDivider" />
+    </LinearLayout>
+</layout>

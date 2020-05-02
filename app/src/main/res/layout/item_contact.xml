@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="contact"
+            type="com.example.sergiobelda.materialmotion.email.Contact" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="4dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            app:shapeAppearance="@style/ShapeAppearance.ImageView"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            app:image_url="@{contact.image}"
+            tools:src="@tools:sample/avatars" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="?attr/textAppearanceSubtitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/material_on_surface_emphasis_high_type"
+            android:text="@{contact.name}"
+            tools:text="@tools:sample/first_names" />
+    </LinearLayout>
+</layout>

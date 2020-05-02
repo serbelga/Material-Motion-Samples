@@ -3,19 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/coordinator"
+    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".email.EmailActivity">
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floating_action_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        android:backgroundTint="?attr/colorPrimary"
-        android:src="@drawable/ic_round_add_24"
-        app:tint="?attr/colorOnPrimary" />
 
     <FrameLayout
         android:id="@+id/fab_scrim"
@@ -25,7 +16,38 @@
         android:focusable="true"
         android:background="@color/colorScrim"
         android:animateLayoutChanges="true"
+        android:elevation="8dp"
         android:visibility="invisible" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        style="@style/Widget.MaterialComponents.AppBarLayout.Surface"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        app:elevation="8dp"
+        android:backgroundTint="?attr/colorPrimary"
+        android:src="@drawable/ic_round_add_24"
+        app:tint="?attr/colorOnPrimary" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        tools:itemCount="10"
+        tools:listitem="@layout/item_message" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card"
@@ -33,9 +55,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
+        app:cardElevation="8dp"
         android:visibility="invisible">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/card_recycler_view"
             android:layout_width="match_parent"
             android:layout_height="180dp"
             android:layout_marginBottom="52dp"/>
@@ -49,6 +73,6 @@
             android:insetBottom="0dp"
             android:text="Compose New"
             app:cornerRadius="0dp"
-            app:icon="@drawable/ic_outline_edit_24"></com.google.android.material.button.MaterialButton>
+            app:icon="@drawable/ic_outline_edit_24" />
     </com.google.android.material.card.MaterialCardView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
