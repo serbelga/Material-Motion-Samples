@@ -7,7 +7,7 @@
 
         <variable
             name="message"
-            type="com.example.sergiobelda.materialmotion.email.Message" />
+            type="com.example.sergiobelda.materialmotion.messages.Message" />
     </data>
 
     <LinearLayout

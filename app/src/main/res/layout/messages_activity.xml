@@ -6,7 +6,7 @@
     android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".email.EmailActivity">
+    tools:context=".messages.MessagesActivity">
 
     <FrameLayout
         android:id="@+id/fab_scrim"
@@ -37,6 +37,7 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         app:elevation="8dp"
+        android:visibility="invisible"
         android:backgroundTint="?attr/colorPrimary"
         android:src="@drawable/ic_round_add_24"
         app:tint="?attr/colorOnPrimary" />

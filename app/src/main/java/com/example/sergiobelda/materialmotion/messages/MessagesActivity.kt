@@ -1,4 +1,4 @@
-package com.example.sergiobelda.materialmotion.email
+package com.example.sergiobelda.materialmotion.messages
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -8,29 +8,45 @@ import android.view.MenuItem
 import android.view.View
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.sergiobelda.materialmotion.R
-import com.example.sergiobelda.materialmotion.databinding.EmailActivityBinding
+import com.example.sergiobelda.materialmotion.databinding.MessagesActivityBinding
 import com.google.android.material.transition.MaterialContainerTransform
+import com.google.android.material.transition.MaterialFade
 
-class EmailActivity : AppCompatActivity() {
-    private lateinit var binding: EmailActivityBinding
+class MessagesActivity : AppCompatActivity() {
+    private lateinit var binding: MessagesActivityBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = EmailActivityBinding.inflate(layoutInflater)
+        binding = MessagesActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = getString(R.string.messages)
 
+        setClickListeners()
+
+        setRecyclerViews()
+
+        binding.floatingActionButton.post {
+            val transition = MaterialFade.create(true).apply {
+                duration = 500
+            }
+            TransitionManager.beginDelayedTransition(binding.root, transition)
+            binding.floatingActionButton.visibility = View.VISIBLE
+        }
+    }
+
+    private fun setClickListeners() {
         binding.floatingActionButton.setOnClickListener {
             val transition = buildTransition()
 
             transition.startView = binding.floatingActionButton
             transition.endView = binding.card
 
-            TransitionManager.beginDelayedTransition(binding.coordinator, transition)
+            TransitionManager.beginDelayedTransition(binding.root, transition)
             binding.card.visibility = View.VISIBLE
             binding.fabScrim.visibility = View.VISIBLE
             binding.floatingActionButton.visibility = View.INVISIBLE
@@ -47,9 +63,32 @@ class EmailActivity : AppCompatActivity() {
             binding.fabScrim.visibility = View.INVISIBLE
             binding.floatingActionButton.visibility = View.VISIBLE
         }
+    }
 
+    private fun setRecyclerViews() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = MessagesAdapter(messages)
+        binding.recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            /*
+            // When scroll down FAB disappears, when scroll up FAB appears
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                if (dy > 0) {
+                    binding.floatingActionButton.hide()
+                } else {
+                    binding.floatingActionButton.show()
+                }
+            }
+            */
+
+            // When is dragging FAB disappears, when stops FAB appears
+            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                if (newState == RecyclerView.SCROLL_STATE_IDLE) {
+                    binding.floatingActionButton.show()
+                } else {
+                    binding.floatingActionButton.hide()
+                }
+            }
+        })
 
         binding.cardRecyclerView.layoutManager = LinearLayoutManager(this)
         binding.cardRecyclerView.adapter = ContactsAdapter(favContacts)

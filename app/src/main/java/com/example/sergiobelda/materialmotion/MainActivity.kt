@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.sergiobelda.materialmotion.databinding.MainActivityBinding
-import com.example.sergiobelda.materialmotion.email.EmailActivity
+import com.example.sergiobelda.materialmotion.messages.MessagesActivity
 import com.example.sergiobelda.materialmotion.music.MusicActivity
 import com.example.sergiobelda.materialmotion.planets.PlanetsActivity
 
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         binding.email.setOnClickListener {
-            val intent = Intent(this, EmailActivity::class.java)
+            val intent = Intent(this, MessagesActivity::class.java)
             startActivity(intent)
         }
     }

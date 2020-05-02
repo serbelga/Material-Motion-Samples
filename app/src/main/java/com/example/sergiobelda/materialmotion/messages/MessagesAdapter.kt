@@ -1,4 +1,4 @@
-package com.example.sergiobelda.materialmotion.email
+package com.example.sergiobelda.materialmotion.messages
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
