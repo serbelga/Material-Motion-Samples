@@ -19,7 +19,7 @@ class PlanetsActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = getString(R.string.solar_system)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
 
         val fragment = PlanetFragment.newInstance(planets[selected].id)
         supportFragmentManager

@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="Material Motion Samples"
-            android:textColor="@color/material_on_background_emphasis_medium"/>
+            android:textColor="@color/material_on_surface_emphasis_medium"/>
     </LinearLayout>
 
     <LinearLayout
@@ -52,6 +52,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/messages" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notes" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/music"

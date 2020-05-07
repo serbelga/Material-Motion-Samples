@@ -9,7 +9,6 @@ import android.view.View
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.sergiobelda.materialmotion.R
 import com.example.sergiobelda.materialmotion.databinding.MessagesActivityBinding
 import com.google.android.material.transition.MaterialContainerTransform
 import com.google.android.material.transition.MaterialFade
@@ -24,7 +23,7 @@ class MessagesActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = getString(R.string.messages)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
 
         setClickListeners()
 

@@ -5,7 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.bumptech.glide.Glide
+import androidx.databinding.DataBindingUtil
+import com.example.sergiobelda.materialmotion.R
 import com.example.sergiobelda.materialmotion.databinding.PlanetFragmentBinding
 
 private const val ARG_PLANET_ID = "planet_id"
@@ -16,8 +17,7 @@ private const val ARG_PLANET_ID = "planet_id"
  * create an instance of this fragment.
  */
 class PlanetFragment : Fragment() {
-    private var _binding: PlanetFragmentBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var binding: PlanetFragmentBinding
 
     private var planetId: Int? = null
 
@@ -29,28 +29,20 @@ class PlanetFragment : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = PlanetFragmentBinding.inflate(inflater, container, false)
+        binding = DataBindingUtil.inflate(layoutInflater, R.layout.planet_fragment, container, false)
+        binding.lifecycleOwner = viewLifecycleOwner
         return binding.root
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val planet = planets.singleOrNull { it.id == planetId}
         planet?.let {
-            Glide.with(requireContext())
-                .load(it.mainImage)
-                .into(binding.mainImage)
-
-            binding.planetName.text = planet.name
-            binding.planetDescription.text = planet.description
+            binding.planet = it
         }
     }
 

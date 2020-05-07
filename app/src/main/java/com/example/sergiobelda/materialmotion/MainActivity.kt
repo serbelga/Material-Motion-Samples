@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.example.sergiobelda.materialmotion.databinding.MainActivityBinding
 import com.example.sergiobelda.materialmotion.messages.MessagesActivity
 import com.example.sergiobelda.materialmotion.music.MusicActivity
+import com.example.sergiobelda.materialmotion.notes.NotesActivity
 import com.example.sergiobelda.materialmotion.planets.PlanetsActivity
 
 class MainActivity : AppCompatActivity() {
@@ -22,6 +23,10 @@ class MainActivity : AppCompatActivity() {
         }
         binding.music.setOnClickListener {
             val intent = Intent(this, MusicActivity::class.java)
+            startActivity(intent)
+        }
+        binding.notes.setOnClickListener {
+            val intent = Intent(this, NotesActivity::class.java)
             startActivity(intent)
         }
         binding.email.setOnClickListener {

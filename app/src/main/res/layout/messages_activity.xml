@@ -21,13 +21,23 @@
 
     <com.google.android.material.appbar.AppBarLayout
         style="@style/Widget.MaterialComponents.AppBarLayout.Surface"
+        app:liftOnScroll="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="?attr/textAppearanceHeadline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/material_on_surface_emphasis_medium"
+                android:text="@string/messages" />
+        </com.google.android.material.appbar.MaterialToolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -36,11 +46,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
-        app:elevation="8dp"
-        android:visibility="invisible"
-        android:backgroundTint="?attr/colorPrimary"
         android:src="@drawable/ic_round_add_24"
-        app:tint="?attr/colorOnPrimary" />
+        android:visibility="invisible"
+        app:elevation="8dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
@@ -73,6 +81,7 @@
             android:insetTop="0dp"
             android:insetBottom="0dp"
             android:text="Compose New"
+            android:backgroundTint="?attr/colorSecondary"
             app:cornerRadius="0dp"
             app:icon="@drawable/ic_outline_edit_24" />
     </com.google.android.material.card.MaterialCardView>

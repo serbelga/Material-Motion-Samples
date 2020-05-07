@@ -14,4 +14,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="messages">Messages</string>
     <string name="solar_system">Solar System</string>
+    <string name="add_note">Add note</string>
+    <string name="save_note">Save note</string>
 </resources>
