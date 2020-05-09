@@ -69,4 +69,4 @@ val contacts = listOf(contact1, contact2, contact3, contact4)
 
 val favContacts = listOf(contact1, contact2, contact3)
 
-val messages = listOf(message1, message2, message3, message4, message4, message4, message4, message4, message4, message4, message4, message4, message4)
+val messages = listOf(message1, message2, message3, message4)

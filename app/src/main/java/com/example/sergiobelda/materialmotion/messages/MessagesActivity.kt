@@ -40,7 +40,7 @@ class MessagesActivity : AppCompatActivity() {
 
     private fun setClickListeners() {
         binding.floatingActionButton.setOnClickListener {
-            val transition = buildTransition()
+            val transition = buildContainerTransformation()
 
             transition.startView = binding.floatingActionButton
             transition.endView = binding.card
@@ -52,7 +52,7 @@ class MessagesActivity : AppCompatActivity() {
         }
 
         binding.fabScrim.setOnClickListener {
-            val transition = buildTransition()
+            val transition = buildContainerTransformation()
 
             transition.startView = binding.card
             transition.endView = binding.floatingActionButton
@@ -93,7 +93,7 @@ class MessagesActivity : AppCompatActivity() {
         binding.cardRecyclerView.adapter = ContactsAdapter(favContacts)
     }
 
-    private fun buildTransition() =
+    private fun buildContainerTransformation() =
         MaterialContainerTransform().apply {
             duration = 300
             scrimColor = Color.TRANSPARENT

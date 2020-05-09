@@ -11,7 +11,6 @@ import com.google.android.material.transition.MaterialArcMotion
 import com.google.android.material.transition.MaterialContainerTransform
 import com.google.android.material.transition.MaterialContainerTransformSharedElementCallback
 
-
 class AddNoteActivity : AppCompatActivity() {
     private lateinit var binding: AddNoteActivityBinding
 
@@ -33,15 +32,14 @@ class AddNoteActivity : AppCompatActivity() {
         supportActionBar?.setDisplayShowTitleEnabled(false)
     }
 
-    private fun buildContainerTransform(): MaterialContainerTransform? {
-        val transform = MaterialContainerTransform()
-        transform.addTarget(binding.coordinator)
-        transform.duration = 500
-        transform.pathMotion = MaterialArcMotion()
-        transform.interpolator = FastOutSlowInInterpolator()
-        transform.fadeMode = MaterialContainerTransform.FADE_MODE_IN
-        return transform
-    }
+    private fun buildContainerTransform() =
+        MaterialContainerTransform().apply {
+            addTarget(binding.coordinator)
+            duration = 500
+            pathMotion = MaterialArcMotion()
+            interpolator = FastOutSlowInInterpolator()
+            fadeMode = MaterialContainerTransform.FADE_MODE_IN
+        }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {

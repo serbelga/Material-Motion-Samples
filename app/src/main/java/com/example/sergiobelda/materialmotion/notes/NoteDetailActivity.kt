@@ -5,9 +5,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.view.Window
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator
-import com.example.sergiobelda.materialmotion.R
 import com.example.sergiobelda.materialmotion.databinding.NoteDetailActivityBinding
-import com.google.android.material.transition.MaterialArcMotion
 import com.google.android.material.transition.MaterialContainerTransform
 import com.google.android.material.transition.MaterialContainerTransformSharedElementCallback
 
@@ -21,7 +19,7 @@ class NoteDetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val noteId = intent.getIntExtra("noteId", 0)
-        val note = notes.first { it.id == noteId }
+        val note = notes.find { it.id == noteId }
         binding.note = note
 
         binding.coordinator.transitionName = noteId.toString()
@@ -34,14 +32,13 @@ class NoteDetailActivity : AppCompatActivity() {
         supportActionBar?.setDisplayShowTitleEnabled(false)
     }
 
-    private fun buildContainerTransform(): MaterialContainerTransform? {
-        val transform = MaterialContainerTransform()
-        transform.addTarget(binding.coordinator)
-        transform.duration = 500
-        transform.interpolator = FastOutSlowInInterpolator()
-        transform.fadeMode = MaterialContainerTransform.FADE_MODE_IN
-        return transform
-    }
+    private fun buildContainerTransform() =
+        MaterialContainerTransform().apply {
+            addTarget(binding.coordinator)
+            duration = 3000
+            interpolator = FastOutSlowInInterpolator()
+            fadeMode = MaterialContainerTransform.FADE_MODE_IN
+        }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
