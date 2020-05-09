@@ -16,8 +16,10 @@
         <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.LargeComponent</item>
 
         <item name="textAppearanceBody1">@style/TextAppearance.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.Body2</item>
         <item name="textAppearanceSubtitle1">@style/TextAppearance.Subtitle1</item>
         <item name="textAppearanceSubtitle2">@style/TextAppearance.Subtitle2</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.Caption</item>
         <item name="textAppearanceButton">@style/TextAppearance.Button</item>
         <item name="textAppearanceHeadline6">@style/TextAppearance.Headline6</item>
     </style>

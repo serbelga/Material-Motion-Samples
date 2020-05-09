@@ -1,4 +1,4 @@
-package com.example.sergiobelda.materialmotion.messages
+package com.example.sergiobelda.materialmotion.databinding
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter

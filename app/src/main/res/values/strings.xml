@@ -16,4 +16,7 @@
     <string name="solar_system">Solar System</string>
     <string name="add_note">Add note</string>
     <string name="save_note">Save note</string>
+    <string name="body">Body</string>
+    <string name="title">Title</string>
+    <string name="my_notes">My notes</string>
 </resources>

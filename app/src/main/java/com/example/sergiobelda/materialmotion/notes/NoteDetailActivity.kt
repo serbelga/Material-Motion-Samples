@@ -1,35 +1,36 @@
 package com.example.sergiobelda.materialmotion.notes
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.Window
-import androidx.appcompat.app.AppCompatActivity
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 import com.example.sergiobelda.materialmotion.R
-import com.example.sergiobelda.materialmotion.databinding.AddNoteActivityBinding
+import com.example.sergiobelda.materialmotion.databinding.NoteDetailActivityBinding
 import com.google.android.material.transition.MaterialArcMotion
 import com.google.android.material.transition.MaterialContainerTransform
 import com.google.android.material.transition.MaterialContainerTransformSharedElementCallback
 
-
-class AddNoteActivity : AppCompatActivity() {
-    private lateinit var binding: AddNoteActivityBinding
+class NoteDetailActivity : AppCompatActivity() {
+    private lateinit var binding: NoteDetailActivityBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         window.requestFeature(Window.FEATURE_ACTIVITY_TRANSITIONS)
         super.onCreate(savedInstanceState)
+        binding = NoteDetailActivityBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        binding = AddNoteActivityBinding.inflate(layoutInflater)
-        setContentView(binding.coordinator)
+        val noteId = intent.getIntExtra("noteId", 0)
+        val note = notes.first { it.id == noteId }
+        binding.note = note
 
-        binding.coordinator.transitionName = "shared_element"
+        binding.coordinator.transitionName = noteId.toString()
         setEnterSharedElementCallback(MaterialContainerTransformSharedElementCallback())
         window.sharedElementEnterTransition = buildContainerTransform()
         window.sharedElementReturnTransition = buildContainerTransform()
 
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_round_clear_24)
         supportActionBar?.setDisplayShowTitleEnabled(false)
     }
 
@@ -37,7 +38,6 @@ class AddNoteActivity : AppCompatActivity() {
         val transform = MaterialContainerTransform()
         transform.addTarget(binding.coordinator)
         transform.duration = 500
-        transform.pathMotion = MaterialArcMotion()
         transform.interpolator = FastOutSlowInInterpolator()
         transform.fadeMode = MaterialContainerTransform.FADE_MODE_IN
         return transform

@@ -8,4 +8,8 @@
     <color name="colorOnPrimary">#FFFFFF</color>
     <color name="colorDivider">#E7E7E7</color>
     <color name="colorBackground">#FAFAFA</color>
+
+    <color name="blue300">#4FC3F7</color>
+    <color name="green300">#81C784</color>
+    <color name="amber300">#FFB74D</color>
 </resources>
