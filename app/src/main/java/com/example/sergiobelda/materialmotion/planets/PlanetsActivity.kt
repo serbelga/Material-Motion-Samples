@@ -3,6 +3,7 @@ package com.example.sergiobelda.materialmotion.planets
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import androidx.fragment.app.commit
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sergiobelda.materialmotion.R
 import com.example.sergiobelda.materialmotion.databinding.PlanetsActivityBinding
@@ -22,10 +23,9 @@ class PlanetsActivity : AppCompatActivity() {
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
         val fragment = PlanetFragment.newInstance(planets[selected].id)
-        supportFragmentManager
-            .beginTransaction()
-            .add(R.id.fragment_container, fragment)
-            .commit()
+        supportFragmentManager.commit {
+            add(R.id.fragment_container, fragment)
+        }
         setRecyclerView()
     }
 
@@ -37,10 +37,9 @@ class PlanetsActivity : AppCompatActivity() {
                 selected = position
                 val fragment = PlanetFragment.newInstance(planets[selected].id)
                 fragment.enterTransition = MaterialSharedAxis.create(MaterialSharedAxis.Y, forward)
-                supportFragmentManager
-                    .beginTransaction()
-                    .replace(R.id.fragment_container, fragment)
-                    .commit()
+                supportFragmentManager.commit {
+                    replace(R.id.fragment_container, fragment)
+                }
             }
         }
         binding.recyclerView.layoutManager = LinearLayoutManager(this)

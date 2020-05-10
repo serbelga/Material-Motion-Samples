@@ -4,10 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.sergiobelda.materialmotion.databinding.MainActivityBinding
+import com.example.sergiobelda.materialmotion.databinding.SignInActivityBinding
 import com.example.sergiobelda.materialmotion.messages.MessagesActivity
 import com.example.sergiobelda.materialmotion.music.MusicActivity
 import com.example.sergiobelda.materialmotion.notes.NotesActivity
 import com.example.sergiobelda.materialmotion.planets.PlanetsActivity
+import com.example.sergiobelda.materialmotion.signin.SignInActivity
+import com.example.sergiobelda.materialmotion.walkthrough.WalkthroughActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: MainActivityBinding
@@ -19,6 +22,14 @@ class MainActivity : AppCompatActivity() {
 
         binding.solarSystem.setOnClickListener {
             val intent = Intent(this, PlanetsActivity::class.java)
+            startActivity(intent)
+        }
+        binding.walkthrough.setOnClickListener {
+            val intent = Intent(this, WalkthroughActivity::class.java)
+            startActivity(intent)
+        }
+        binding.signIn.setOnClickListener {
+            val intent = Intent(this, SignInActivity::class.java)
             startActivity(intent)
         }
         binding.music.setOnClickListener {

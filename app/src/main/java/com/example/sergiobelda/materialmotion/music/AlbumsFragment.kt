@@ -14,7 +14,6 @@ class AlbumsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         enterTransition = MaterialFadeThrough.create()
         return inflater.inflate(R.layout.albums_fragment, container, false)
     }

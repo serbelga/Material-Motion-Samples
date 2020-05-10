@@ -18,6 +18,7 @@ class MusicActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
 
         binding.bottomNavigationView.inflateMenu(R.menu.navigation_menu)
         NavigationUI.setupWithNavController(binding.bottomNavigationView, findNavController(R.id.nav_host_fragment))

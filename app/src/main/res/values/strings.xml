@@ -3,15 +3,6 @@
     <string name="artists">Artists</string>
     <string name="albums">Albums</string>
     <string name="playlists">Playlists</string>
-
-    <string-array name="planets_array">
-        <item>Mercury</item>
-        <item>Venus</item>
-        <item>Earth</item>
-        <item>Mars</item>
-    </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="messages">Messages</string>
     <string name="solar_system">Solar System</string>
     <string name="add_note">Add note</string>
@@ -19,4 +10,20 @@
     <string name="body">Body</string>
     <string name="title">Title</string>
     <string name="my_notes">My notes</string>
+    <string name="notes">Notes</string>
+    <string name="walkthrough">Walkthrough</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="upload_your_photos">Upload your photos</string>
+    <string name="share">Share</string>
+    <string name="invite_friends">Invite Friends</string>
+    <string name="upload_artistic_photos">Upload your artistic photos to the app</string>
+    <string name="share_work_social_networks">Share your work on social networks</string>
+    <string name="enjoy_rewards">You and your friends will enjoy fantastic rewards!</string>
+    <string name="sign_in">Sign In</string>
+    <string name="user">User</string>
+    <string name="password">Password</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="my_library">My Library</string>
 </resources>

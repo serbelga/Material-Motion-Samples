@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.sergiobelda.materialmotion">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -11,13 +12,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".notes.NoteDetailActivity"></activity>
-        <activity android:name=".notes.AddNoteActivity" />
-        <activity android:name=".notes.NotesActivity" />
-        <activity android:name=".messages.MessagesActivity" />
-        <activity android:name=".music.MusicActivity" />
-        <activity android:name=".planets.PlanetsActivity" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".signin.SignInActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".walkthrough.WalkthroughActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".notes.NoteDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".notes.AddNoteActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".notes.NotesActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".messages.MessagesActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".music.MusicActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".planets.PlanetsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

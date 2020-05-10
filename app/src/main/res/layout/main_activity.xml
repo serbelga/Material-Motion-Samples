@@ -42,12 +42,6 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/solar_system"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/solar_system" />
-
-        <com.google.android.material.button.MaterialButton
             android:id="@+id/email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -57,13 +51,30 @@
             android:id="@+id/notes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Notes" />
+            android:text="@string/notes" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/walkthrough"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/walkthrough" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/solar_system"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/solar_system" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_in" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/music"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:enabled="false"
             android:text="Music" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

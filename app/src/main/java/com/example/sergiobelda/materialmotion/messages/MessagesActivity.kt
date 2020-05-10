@@ -31,7 +31,7 @@ class MessagesActivity : AppCompatActivity() {
 
         binding.floatingActionButton.post {
             val transition = MaterialFade.create(true).apply {
-                duration = 500
+                duration = 5000
             }
             TransitionManager.beginDelayedTransition(binding.root, transition)
             binding.floatingActionButton.visibility = View.VISIBLE
