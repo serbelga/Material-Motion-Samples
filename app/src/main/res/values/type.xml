@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="TextAppearance.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/metropolis_medium</item>
+    </style>
+    <style name="TextAppearance.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
         <item name="fontFamily">@font/metropolis_semibold</item>
     </style>
     <style name="TextAppearance.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/metropolis_medium</item>
+    </style>
+    <style name="TextAppearance.Overline" parent="TextAppearance.MaterialComponents.Overline">
         <item name="fontFamily">@font/metropolis_medium</item>
     </style>
     <style name="TextAppearance.Body1" parent="TextAppearance.MaterialComponents.Body1">

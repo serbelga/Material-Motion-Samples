@@ -35,7 +35,7 @@ class NoteDetailActivity : AppCompatActivity() {
     private fun buildContainerTransform() =
         MaterialContainerTransform().apply {
             addTarget(binding.coordinator)
-            duration = 3000
+            duration = 300
             interpolator = FastOutSlowInInterpolator()
             fadeMode = MaterialContainerTransform.FADE_MODE_IN
         }

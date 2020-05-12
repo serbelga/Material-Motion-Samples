@@ -23,7 +23,6 @@
     <string name="sign_in">Sign In</string>
     <string name="user">User</string>
     <string name="password">Password</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="my_library">My Library</string>
+    <string name="return_to">Return</string>
 </resources>

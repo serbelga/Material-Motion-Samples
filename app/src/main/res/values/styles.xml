@@ -9,7 +9,9 @@
         <item name="colorOnPrimary">@color/colorOnPrimary</item>
         <item name="colorOnSecondary">@color/colorOnSecondary</item>
         <item name="android:colorBackground">@color/colorBackground</item>
-        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:statusBarColor">@color/colorSurface</item>
+        <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
 
         <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.SmallComponent</item>
         <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.MediumComponent</item>
@@ -17,10 +19,12 @@
 
         <item name="textAppearanceBody1">@style/TextAppearance.Body1</item>
         <item name="textAppearanceBody2">@style/TextAppearance.Body2</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.Overline</item>
         <item name="textAppearanceSubtitle1">@style/TextAppearance.Subtitle1</item>
         <item name="textAppearanceSubtitle2">@style/TextAppearance.Subtitle2</item>
         <item name="textAppearanceCaption">@style/TextAppearance.Caption</item>
         <item name="textAppearanceButton">@style/TextAppearance.Button</item>
         <item name="textAppearanceHeadline6">@style/TextAppearance.Headline6</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.Headline5</item>
     </style>
 </resources>

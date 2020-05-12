@@ -4,10 +4,12 @@
     <color name="colorPrimaryDark">#0277BD</color>
     <color name="colorSecondary">#283593</color>
     <color name="colorScrim">#66434343</color>
+    <color name="colorSurface">#FFFFFF</color>
     <color name="colorOnSecondary">#FFFFFF</color>
     <color name="colorOnPrimary">#FFFFFF</color>
     <color name="colorDivider">#E7E7E7</color>
     <color name="colorBackground">#FAFAFA</color>
+    <color name="darkSurface">#202020</color>
 
     <color name="blue300">#4FC3F7</color>
     <color name="green300">#81C784</color>

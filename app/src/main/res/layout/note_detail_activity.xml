@@ -14,13 +14,13 @@
         android:id="@+id/coordinator"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@{context.resources.getColor(note.colorRes)}"
-        android:fitsSystemWindows="true">
+        android:background="@{context.resources.getColor(note.colorRes)}">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true">
 
             <com.google.android.material.textview.MaterialTextView
                 style="?attr/textAppearanceHeadline6"
