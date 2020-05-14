@@ -8,18 +8,40 @@ A collection of samples using Material Components Transitions for Android
 <img src="https://github.com/serbelga/material_motion_samples/workflows/Android%20CI/badge.svg">
 </p>
 
-<h2>Messages</h2>
+<h2>Material Container Transform</h2>
 
-<img align="center" width="260" src="./screenshots/messages.gif">
+<h3 align="left">Fab to Menu</h3>
+
+<img align="center" width="260" src="./screenshots/fab_to_menu.gif">
 
 It implements an expanded FAB transition to transform the FAB into a menu with related actions. It uses the [Material Container Transform](https://material.io/design/motion/the-motion-system.html#container-transform) transition to transform a view.
 
-<h2 align="left">Solar system</h2>
+<h3 align="left">Fab to Activity</h3>
 
-<img align="center" src="./screenshots/solar_system.gif" width="260">
+<img align="center" width="260" src="./screenshots/fab_to_activity.gif">
 
-A Material Stepper using [Shared Axis](https://material.io/design/motion/the-motion-system.html#shared-axis) pattern. The transition is made on the Y axis in two directions depending on the step that is clicked.
+<h3 align="left">Material Container Transform with Android Navigation Component</h3>
 
-<h2 align="left">Music</h2>
+<img align="center" width="260" src="./navigation_container_transform.gif">
 
-...
+<h2 align="left">Shared Axis</h2>
+
+<h3 align="left">X-axis</h3>
+
+<img align="center" src="./screenshots/shared_axis_x.gif" width="260">
+
+<h3 align="left">Y-axis</h3>
+
+<img align="center" src="./screenshots/shared_axis_y.gif" width="260">
+
+<h3 align="left">Z-axis</h3>
+
+<img align="center" src="./screenshots/shared_axis_z.gif" width="260">
+
+<h2 align="left">Fade Through</h2>
+
+<img align="center" src="./screenshots/fade_through.gif" width="260">
+
+<h2 align="left">Fade</h2>
+
+<img align="center" src="./screenshots/fade_fab.gif" width="260">
