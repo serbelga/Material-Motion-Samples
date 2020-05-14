@@ -8,23 +8,24 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.sergiobelda.materialmotion.R
 import com.example.sergiobelda.materialmotion.databinding.AlbumsFragmentBinding
 import com.google.android.material.card.MaterialCardView
-import com.google.android.material.transition.Hold
 import com.google.android.material.transition.MaterialFadeThrough
 
 class AlbumsFragment : Fragment() {
     private var _binding: AlbumsFragmentBinding? = null
     private val binding get() = _binding!!
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enterTransition = MaterialFadeThrough.create()
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        enterTransition = MaterialFadeThrough.create()
         _binding = AlbumsFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }

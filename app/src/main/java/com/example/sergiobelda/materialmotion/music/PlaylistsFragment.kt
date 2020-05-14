@@ -10,11 +10,15 @@ import com.google.android.material.transition.MaterialFadeThrough
 
 class PlaylistsFragment : Fragment() {
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enterTransition = MaterialFadeThrough.create()
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        enterTransition = MaterialFadeThrough.create()
         return inflater.inflate(R.layout.playlists_fragment, container, false)
     }
 }

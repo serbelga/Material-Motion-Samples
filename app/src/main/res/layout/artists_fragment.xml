@@ -5,10 +5,8 @@
     android:layout_height="match_parent"
     tools:context=".music.ArtistsFragment">
 
-    <com.google.android.material.textview.MaterialTextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Donec condimentum nisi sed nibh tincidunt porttitor. Nam sed maximus ex. Vivamus sit amet quam sit amet nulla congue fermentum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras lacus quam, scelerisque non risus sit amet, aliquam blandit libero. In vitae purus et felis dictum condimentum ut sed diam. Nullam aliquam tempus risus in tincidunt. Nunc eget leo leo. Maecenas sit amet tincidunt massa. Integer velit nunc, ultricies condimentum magna at, bibendum gravida urna. In blandit blandit diam ac interdum. Sed in mi aliquet dolor pharetra vehicula.
-
-Fusce libero arcu, accumsan et ante eget, ultrices maximus lacus. Suspendisse potenti. Suspendisse non erat mi. Quisque at iaculis tortor. Maecenas dapibus sollicitudin fringilla. Pellentesque vehicula iaculis fringilla. Morbi quis vehicula ipsum, eu sollicitudin nisl."></com.google.android.material.textview.MaterialTextView>
+        android:layout_height="match_parent" />
 </FrameLayout>

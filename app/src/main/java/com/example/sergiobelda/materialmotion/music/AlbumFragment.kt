@@ -20,7 +20,6 @@ import com.example.sergiobelda.materialmotion.databinding.AlbumFragmentBinding
 import com.google.android.material.transition.MaterialContainerTransform
 
 class AlbumFragment : Fragment() {
-
     private val args: AlbumFragmentArgs by navArgs()
 
     private lateinit var binding: AlbumFragmentBinding

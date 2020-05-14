@@ -3,6 +3,7 @@ package com.example.sergiobelda.materialmotion.music
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
@@ -38,9 +39,11 @@ class MusicActivity : AppCompatActivity() {
             when (destination.id) {
                 R.id.albumFragment -> {
                     binding.appbarLayout.setExpanded(false, false)
+                    binding.bottomNavigationView.visibility = View.GONE
                 }
                 else -> {
                     binding.appbarLayout.setExpanded(true, true)
+                    binding.bottomNavigationView.visibility = View.VISIBLE
                 }
             }
         }
