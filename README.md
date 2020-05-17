@@ -22,21 +22,13 @@ It implements an expanded FAB transition to transform the FAB into a menu with r
 
 <h3 align="left">Material Container Transform with Android Navigation Component</h3>
 
-<img align="center" width="260" src="./navigation_container_transform.gif">
+<img align="center" width="260" src="./screenshots/navigation_container_transform.gif">
 
 <h2 align="left">Shared Axis</h2>
 
-<h3 align="left">X-axis</h3>
-
-<img align="center" src="./screenshots/shared_axis_x.gif" width="260">
-
-<h3 align="left">Y-axis</h3>
-
-<img align="center" src="./screenshots/shared_axis_y.gif" width="260">
-
-<h3 align="left">Z-axis</h3>
-
-<img align="center" src="./screenshots/shared_axis_z.gif" width="260">
+| X-axis | Y-axis | Z-axis |
+|---|---|---|
+| <img align="center" src="./screenshots/shared_axis_x.gif" width="260">  |  <img align="center" src="./screenshots/shared_axis_y.gif" width="260"> | <img align="center" src="./screenshots/shared_axis_z.gif" width="260">  |
 
 <h2 align="left">Fade Through</h2>
 
