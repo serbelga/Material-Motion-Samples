@@ -8,7 +8,6 @@ import com.example.sergiobelda.materialmotion.R
 import com.example.sergiobelda.materialmotion.databinding.SignInActivityBinding
 import com.google.android.material.transition.MaterialSharedAxis
 
-
 class SignInActivity : AppCompatActivity() {
     private lateinit var binding: SignInActivityBinding
 
@@ -18,10 +17,10 @@ class SignInActivity : AppCompatActivity() {
         binding = SignInActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val fragment = SignInFragment()
-        fragment.enterTransition = MaterialSharedAxis.create(MaterialSharedAxis.Z, false)
+        val signInFragment = SignInFragment()
+        signInFragment.enterTransition = MaterialSharedAxis.create(MaterialSharedAxis.Z, false)
         supportFragmentManager.commit {
-            add(R.id.fragment_container, fragment)
+            add(R.id.fragment_container, signInFragment)
         }
     }
 }
