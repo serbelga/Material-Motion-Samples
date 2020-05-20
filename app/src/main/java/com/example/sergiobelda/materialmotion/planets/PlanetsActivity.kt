@@ -24,7 +24,7 @@ class PlanetsActivity : AppCompatActivity() {
 
         val fragment = PlanetFragment.newInstance(planets[selected].id)
         supportFragmentManager.commit {
-            add(R.id.fragment_container, fragment)
+            add(R.id.fragment_container, fragment, FRAGMENT_TAG)
         }
         setRecyclerView()
     }
@@ -35,10 +35,12 @@ class PlanetsActivity : AppCompatActivity() {
             override fun onStepClick(position: Int) {
                 val forward = position >= selected
                 selected = position
+                val previousFragment = supportFragmentManager.findFragmentByTag(FRAGMENT_TAG)
+                previousFragment?.exitTransition = buildTransition(forward)
                 val fragment = PlanetFragment.newInstance(planets[selected].id)
-                fragment.enterTransition = MaterialSharedAxis.create(MaterialSharedAxis.Y, forward)
+                fragment.enterTransition = buildTransition(forward)
                 supportFragmentManager.commit {
-                    replace(R.id.fragment_container, fragment)
+                    replace(R.id.fragment_container, fragment, FRAGMENT_TAG)
                 }
             }
         }
@@ -56,5 +58,14 @@ class PlanetsActivity : AppCompatActivity() {
                 true
             }
         }
+    }
+
+    private fun buildTransition(forward: Boolean) =
+        MaterialSharedAxis.create(MaterialSharedAxis.Y, forward).apply {
+            duration = 500
+        }
+
+    companion object {
+        private const val FRAGMENT_TAG = "PLANET_FRAGMENT"
     }
 }

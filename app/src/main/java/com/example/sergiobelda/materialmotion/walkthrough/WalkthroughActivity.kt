@@ -48,7 +48,7 @@ class WalkthroughActivity : AppCompatActivity() {
                 images[it]
             )
             supportFragmentManager.commit {
-                add(R.id.fragment_container, fragment)
+                add(R.id.fragment_container, fragment, FRAGMENT_TAG)
             }
         }
 
@@ -91,15 +91,26 @@ class WalkthroughActivity : AppCompatActivity() {
 
     private fun selectFragment(forward: Boolean) {
         selected.value?.let {
+            val previousFragment = supportFragmentManager.findFragmentByTag(FRAGMENT_TAG)
+            previousFragment?.exitTransition = buildTransition(forward)
             val fragment = WalkthroughFragment.newInstance(
                 titles[it],
                 bodies[it],
                 images[it]
             )
-            fragment.enterTransition = MaterialSharedAxis.create(MaterialSharedAxis.X, forward)
+            fragment.enterTransition = buildTransition(forward)
             supportFragmentManager.commit {
-                replace(R.id.fragment_container, fragment)
+                replace(R.id.fragment_container, fragment, FRAGMENT_TAG)
             }
         }
+    }
+
+    private fun buildTransition(forward: Boolean) =
+        MaterialSharedAxis.create(MaterialSharedAxis.X, forward).apply {
+            duration = 500
+        }
+
+    companion object {
+        private const val FRAGMENT_TAG = "WALKTHROUGH_FRAGMENT"
     }
 }

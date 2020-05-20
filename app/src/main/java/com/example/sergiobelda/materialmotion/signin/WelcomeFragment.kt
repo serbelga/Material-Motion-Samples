@@ -14,6 +14,11 @@ class WelcomeFragment : Fragment() {
     private var _binding: WelcomeFragmentBinding? = null
     private val binding get() = _binding!!
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        exitTransition = buildTransition()
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -27,12 +32,17 @@ class WelcomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.returnButton.setOnClickListener {
             val signInFragment = SignInFragment()
-            signInFragment.enterTransition = MaterialSharedAxis.create(MaterialSharedAxis.Z, false)
+            signInFragment.enterTransition = buildTransition()
             parentFragmentManager.commit {
                 replace(R.id.fragment_container, signInFragment)
             }
         }
     }
+
+    private fun buildTransition() =
+        MaterialSharedAxis.create(MaterialSharedAxis.Z, false).apply {
+            duration = 500
+        }
 
     override fun onDestroyView() {
         super.onDestroyView()
