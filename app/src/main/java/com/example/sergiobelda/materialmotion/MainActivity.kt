@@ -1,10 +1,9 @@
 package com.example.sergiobelda.materialmotion
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.sergiobelda.materialmotion.databinding.MainActivityBinding
-import com.example.sergiobelda.materialmotion.databinding.SignInActivityBinding
 import com.example.sergiobelda.materialmotion.messages.MessagesActivity
 import com.example.sergiobelda.materialmotion.music.MusicActivity
 import com.example.sergiobelda.materialmotion.notes.NotesActivity

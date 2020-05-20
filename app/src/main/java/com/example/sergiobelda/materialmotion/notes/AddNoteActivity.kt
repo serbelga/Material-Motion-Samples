@@ -1,5 +1,6 @@
 package com.example.sergiobelda.materialmotion.notes
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.Window
@@ -38,6 +39,7 @@ class AddNoteActivity : AppCompatActivity() {
             duration = 500
             pathMotion = MaterialArcMotion()
             interpolator = FastOutSlowInInterpolator()
+            containerColor = Color.WHITE
             fadeMode = MaterialContainerTransform.FADE_MODE_IN
         }
 

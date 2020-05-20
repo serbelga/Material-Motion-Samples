@@ -1,12 +1,11 @@
 package com.example.sergiobelda.materialmotion.walkthrough
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.DrawableRes
-import com.example.sergiobelda.materialmotion.R
+import androidx.fragment.app.Fragment
 import com.example.sergiobelda.materialmotion.databinding.WalkthroughFragmentBinding
 
 private const val ARG_TITLE = "title"

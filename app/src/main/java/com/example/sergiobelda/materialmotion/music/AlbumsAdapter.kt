@@ -23,7 +23,7 @@ class AlbumsAdapter(private val items: List<Album>, private val context: Context
             Glide.with(context)
                 .asBitmap()
                 .load(album.image)
-                .into(object : CustomTarget<Bitmap>(){
+                .into(object : CustomTarget<Bitmap>() {
                     override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
                         val palette = Palette.from(resource).generate()
                         palette.darkVibrantSwatch?.let {

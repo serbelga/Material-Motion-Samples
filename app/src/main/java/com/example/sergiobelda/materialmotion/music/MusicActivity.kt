@@ -1,9 +1,9 @@
 package com.example.sergiobelda.materialmotion.music
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
@@ -23,9 +23,11 @@ class MusicActivity : AppCompatActivity() {
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
         binding.bottomNavigationView.inflateMenu(R.menu.navigation_menu)
+
+        val navController = findNavController(R.id.nav_host_fragment)
         NavigationUI.setupWithNavController(
             binding.bottomNavigationView,
-            findNavController(R.id.nav_host_fragment)
+            navController
         )
         val appBarConfiguration = AppBarConfiguration(
             setOf(
@@ -34,8 +36,7 @@ class MusicActivity : AppCompatActivity() {
                 R.id.playlistsFragment
             )
         )
-        val navController = findNavController(R.id.nav_host_fragment)
-        navController.addOnDestinationChangedListener { controller, destination, arguments ->
+        navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
                 R.id.albumFragment -> {
                     binding.appbarLayout.setExpanded(false, false)

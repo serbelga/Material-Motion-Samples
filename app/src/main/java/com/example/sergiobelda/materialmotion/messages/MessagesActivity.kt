@@ -1,11 +1,11 @@
 package com.example.sergiobelda.materialmotion.messages
 
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.transition.TransitionManager
 import android.view.MenuItem
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -100,7 +100,6 @@ class MessagesActivity : AppCompatActivity() {
             interpolator = FastOutSlowInInterpolator()
             fadeMode = MaterialContainerTransform.FADE_MODE_IN
         }
-
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {

@@ -6,7 +6,7 @@
         <item name="cornerSize">4dp</item>
     </style>
 
-    <!--Shape Appearance fo r medium components like cards, alert dialogs-->
+    <!--Shape Appearance for medium components like cards, alert dialogs-->
     <style name="ShapeAppearance.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">6dp</item>

@@ -1,9 +1,9 @@
 package com.example.sergiobelda.materialmotion.notes
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.Window
+import androidx.appcompat.app.AppCompatActivity
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 import com.example.sergiobelda.materialmotion.databinding.NoteDetailActivityBinding
 import com.google.android.material.transition.MaterialContainerTransform

@@ -1,8 +1,8 @@
 package com.example.sergiobelda.materialmotion.planets
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sergiobelda.materialmotion.R

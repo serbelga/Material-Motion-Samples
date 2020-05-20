@@ -5,8 +5,8 @@
     android:id="@+id/coordinator"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?android:attr/colorBackground"
     android:fitsSystemWindows="true"
+    android:background="@color/colorBackground"
     tools:context=".notes.AddNoteActivity">
 
     <com.google.android.material.appbar.AppBarLayout

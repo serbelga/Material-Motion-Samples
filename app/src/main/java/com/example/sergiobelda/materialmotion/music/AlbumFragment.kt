@@ -4,11 +4,11 @@ import android.graphics.Bitmap
 import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 import androidx.navigation.fragment.navArgs
 import androidx.palette.graphics.Palette
@@ -43,7 +43,7 @@ class AlbumFragment : Fragment() {
         Glide.with(requireContext())
                 .asBitmap()
                 .load(album?.image)
-                .into(object : CustomTarget<Bitmap>(){
+                .into(object : CustomTarget<Bitmap>() {
                     override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
                         val palette = Palette.from(resource).generate()
                         palette.darkVibrantSwatch?.let {
@@ -58,8 +58,6 @@ class AlbumFragment : Fragment() {
 
                     override fun onLoadCleared(placeholder: Drawable?) {}
                 })
-
-
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

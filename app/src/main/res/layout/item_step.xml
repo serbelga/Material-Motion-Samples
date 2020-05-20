@@ -37,8 +37,8 @@
 
     <View
         android:id="@+id/separator"
-        android:layout_width="1px"
+        android:layout_width="1dp"
         android:layout_height="64dp"
         android:layout_marginTop="8dp"
-        android:background="?attr/colorControlNormal" />
+        android:background="@color/colorStepDivider" />
 </LinearLayout>

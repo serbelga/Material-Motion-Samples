@@ -1,14 +1,10 @@
 <resources>
-
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorSecondary">@color/colorSecondary</item>
         <item name="colorOnPrimary">@color/colorOnPrimary</item>
         <item name="colorOnSecondary">@color/colorOnSecondary</item>
-        <item name="android:colorBackground">@color/colorBackground</item>
         <item name="android:windowTranslucentStatus">false</item>
         <item name="android:statusBarColor">@color/colorSurface</item>
         <item name="android:windowLightStatusBar">?attr/isLightTheme</item>

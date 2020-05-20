@@ -1,7 +1,7 @@
 package com.example.sergiobelda.materialmotion.walkthrough
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
