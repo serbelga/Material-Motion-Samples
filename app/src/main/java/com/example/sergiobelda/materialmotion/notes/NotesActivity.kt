@@ -16,12 +16,10 @@ class NotesActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         window.requestFeature(Window.FEATURE_ACTIVITY_TRANSITIONS)
-
-        binding = NotesActivityBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
         setExitSharedElementCallback(MaterialContainerTransformSharedElementCallback())
         window.sharedElementsUseOverlay = false
+        binding = NotesActivityBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         super.onCreate(savedInstanceState)
 

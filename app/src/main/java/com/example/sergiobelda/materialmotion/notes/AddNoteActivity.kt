@@ -1,6 +1,5 @@
 package com.example.sergiobelda.materialmotion.notes
 
-import android.graphics.Color
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.Window
@@ -8,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 import com.example.sergiobelda.materialmotion.R
 import com.example.sergiobelda.materialmotion.databinding.AddNoteActivityBinding
+import com.google.android.material.color.MaterialColors
 import com.google.android.material.transition.MaterialArcMotion
 import com.google.android.material.transition.MaterialContainerTransform
 import com.google.android.material.transition.MaterialContainerTransformSharedElementCallback
@@ -17,15 +17,14 @@ class AddNoteActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         window.requestFeature(Window.FEATURE_ACTIVITY_TRANSITIONS)
-        super.onCreate(savedInstanceState)
-
+        setEnterSharedElementCallback(MaterialContainerTransformSharedElementCallback())
         binding = AddNoteActivityBinding.inflate(layoutInflater)
         setContentView(binding.coordinator)
-
         binding.coordinator.transitionName = "shared_element"
-        setEnterSharedElementCallback(MaterialContainerTransformSharedElementCallback())
         window.sharedElementEnterTransition = buildContainerTransform()
         window.sharedElementReturnTransition = buildContainerTransform()
+
+        super.onCreate(savedInstanceState)
 
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -39,7 +38,7 @@ class AddNoteActivity : AppCompatActivity() {
             duration = 500
             pathMotion = MaterialArcMotion()
             interpolator = FastOutSlowInInterpolator()
-            containerColor = Color.WHITE
+            containerColor = MaterialColors.getColor(binding.coordinator, R.attr.colorSurface)
             fadeMode = MaterialContainerTransform.FADE_MODE_IN
         }
 
