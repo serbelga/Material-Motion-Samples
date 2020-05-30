@@ -106,7 +106,7 @@ class WalkthroughActivity : AppCompatActivity() {
     }
 
     private fun buildTransition(forward: Boolean) =
-        MaterialSharedAxis.create(MaterialSharedAxis.X, forward).apply {
+        MaterialSharedAxis(MaterialSharedAxis.X, forward).apply {
             duration = 500
         }
 

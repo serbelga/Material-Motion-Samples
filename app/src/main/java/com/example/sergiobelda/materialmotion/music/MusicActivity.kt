@@ -18,12 +18,9 @@ class MusicActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = MusicActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
-
         binding.bottomNavigationView.inflateMenu(R.menu.navigation_menu)
-
         val navController = findNavController(R.id.nav_host_fragment)
         NavigationUI.setupWithNavController(
             binding.bottomNavigationView,

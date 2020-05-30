@@ -12,7 +12,7 @@ class PlaylistsFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enterTransition = MaterialFadeThrough.create()
+        enterTransition = MaterialFadeThrough()
     }
 
     override fun onCreateView(

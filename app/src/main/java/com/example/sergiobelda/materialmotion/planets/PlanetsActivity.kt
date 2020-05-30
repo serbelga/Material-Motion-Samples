@@ -61,7 +61,7 @@ class PlanetsActivity : AppCompatActivity() {
     }
 
     private fun buildTransition(forward: Boolean) =
-        MaterialSharedAxis.create(MaterialSharedAxis.Y, forward).apply {
+        MaterialSharedAxis(MaterialSharedAxis.Y, forward).apply {
             duration = 500
         }
 

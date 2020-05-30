@@ -40,7 +40,7 @@ class WelcomeFragment : Fragment() {
     }
 
     private fun buildTransition() =
-        MaterialSharedAxis.create(MaterialSharedAxis.Z, false).apply {
+        MaterialSharedAxis(MaterialSharedAxis.Z, false).apply {
             duration = 500
         }
 

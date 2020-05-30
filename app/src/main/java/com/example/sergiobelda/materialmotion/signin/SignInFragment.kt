@@ -40,7 +40,7 @@ class SignInFragment : Fragment() {
     }
 
     private fun buildTransition() =
-        MaterialSharedAxis.create(MaterialSharedAxis.Z, true).apply {
+        MaterialSharedAxis(MaterialSharedAxis.Z, true).apply {
             duration = 500
         }
 

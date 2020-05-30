@@ -9,26 +9,22 @@ import androidx.core.app.ActivityOptionsCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.sergiobelda.materialmotion.databinding.NotesActivityBinding
 import com.google.android.material.card.MaterialCardView
-import com.google.android.material.transition.MaterialContainerTransformSharedElementCallback
+import com.google.android.material.transition.platform.MaterialContainerTransformSharedElementCallback
 
 class NotesActivity : AppCompatActivity() {
     private lateinit var binding: NotesActivityBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         window.requestFeature(Window.FEATURE_ACTIVITY_TRANSITIONS)
+        binding = NotesActivityBinding.inflate(layoutInflater)
         setExitSharedElementCallback(MaterialContainerTransformSharedElementCallback())
         window.sharedElementsUseOverlay = false
-        binding = NotesActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         super.onCreate(savedInstanceState)
-
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
-
         setClickListeners()
-
         setRecyclerView()
     }
 
@@ -49,11 +45,10 @@ class NotesActivity : AppCompatActivity() {
     }
 
     private fun setClickListeners() {
-        binding.addNoteFab.transitionName = "shared_element"
         binding.addNoteFab.setOnClickListener {
             val intent = Intent(this, AddNoteActivity::class.java)
             val options = ActivityOptionsCompat.makeSceneTransitionAnimation(
-                this, binding.addNoteFab, "shared_element"
+                this, binding.addNoteFab, "shared_element_end_root"
             )
             startActivity(intent, options.toBundle())
         }

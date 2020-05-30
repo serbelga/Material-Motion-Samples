@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sergiobelda.materialmotion.databinding.ItemContactBinding
 
-class ContactsAdapter(val items: List<Contact>) : RecyclerView.Adapter<ContactsAdapter.ViewHolder>() {
+class ContactsAdapter(private val items: List<Contact>) : RecyclerView.Adapter<ContactsAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         ViewHolder(

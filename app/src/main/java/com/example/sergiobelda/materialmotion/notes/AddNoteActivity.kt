@@ -8,22 +8,21 @@ import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 import com.example.sergiobelda.materialmotion.R
 import com.example.sergiobelda.materialmotion.databinding.AddNoteActivityBinding
 import com.google.android.material.color.MaterialColors
-import com.google.android.material.transition.MaterialArcMotion
-import com.google.android.material.transition.MaterialContainerTransform
-import com.google.android.material.transition.MaterialContainerTransformSharedElementCallback
+import com.google.android.material.transition.platform.MaterialArcMotion
+import com.google.android.material.transition.platform.MaterialContainerTransform
+import com.google.android.material.transition.platform.MaterialContainerTransformSharedElementCallback
 
 class AddNoteActivity : AppCompatActivity() {
     private lateinit var binding: AddNoteActivityBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         window.requestFeature(Window.FEATURE_ACTIVITY_TRANSITIONS)
-        setEnterSharedElementCallback(MaterialContainerTransformSharedElementCallback())
         binding = AddNoteActivityBinding.inflate(layoutInflater)
-        setContentView(binding.coordinator)
-        binding.coordinator.transitionName = "shared_element"
+        binding.coordinator.transitionName = "shared_element_end_root"
+        setEnterSharedElementCallback(MaterialContainerTransformSharedElementCallback())
         window.sharedElementEnterTransition = buildContainerTransform()
         window.sharedElementReturnTransition = buildContainerTransform()
-
+        setContentView(binding.coordinator)
         super.onCreate(savedInstanceState)
 
         setSupportActionBar(binding.toolbar)
@@ -35,10 +34,10 @@ class AddNoteActivity : AppCompatActivity() {
     private fun buildContainerTransform() =
         MaterialContainerTransform().apply {
             addTarget(binding.coordinator)
-            duration = 500
+            setAllContainerColors(MaterialColors.getColor(binding.root, R.attr.colorSurface))
             pathMotion = MaterialArcMotion()
+            duration = 500
             interpolator = FastOutSlowInInterpolator()
-            containerColor = MaterialColors.getColor(binding.coordinator, R.attr.colorSurface)
             fadeMode = MaterialContainerTransform.FADE_MODE_IN
         }
 
