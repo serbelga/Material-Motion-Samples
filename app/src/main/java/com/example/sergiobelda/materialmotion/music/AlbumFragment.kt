@@ -17,6 +17,7 @@ import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
 import com.example.sergiobelda.materialmotion.R
 import com.example.sergiobelda.materialmotion.databinding.AlbumFragmentBinding
+import com.google.android.material.color.MaterialColors
 import com.google.android.material.transition.MaterialContainerTransform
 
 class AlbumFragment : Fragment() {
@@ -70,7 +71,7 @@ class AlbumFragment : Fragment() {
         MaterialContainerTransform().apply {
             drawingViewId = R.id.nav_host_fragment
             interpolator = FastOutSlowInInterpolator()
-            containerColor = Color.WHITE
+            containerColor = MaterialColors.getColor(binding.root, R.attr.colorSurface)
             fadeMode = MaterialContainerTransform.FADE_MODE_OUT
             duration = 300
         }
