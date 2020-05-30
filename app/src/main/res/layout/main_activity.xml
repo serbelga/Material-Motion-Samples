@@ -137,18 +137,18 @@
                         style="?attr/textAppearanceBody1"
                         android:maxLines="5"
                         android:ellipsize="end"
-                        android:text="@string/solar_system_card_body"
+                        android:text="@string/walkthrough_card_body"
                         android:layout_margin="@dimen/card_body_margin"/>
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/solar_system"
+                        android:id="@+id/walkthrough"
                         style="?materialButtonOutlinedStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
                         app:icon="@drawable/ic_outline_play_arrow_24"
                         android:layout_marginEnd="@dimen/card_button_margin"
-                        android:text="@string/solar_system" />
+                        android:text="@string/walkthrough" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -168,18 +168,18 @@
                         style="?attr/textAppearanceBody1"
                         android:maxLines="5"
                         android:ellipsize="end"
-                        android:text="@string/walkthrough_card_body"
+                        android:text="@string/solar_system_card_body"
                         android:layout_margin="@dimen/card_body_margin"/>
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/walkthrough"
+                        android:id="@+id/solar_system"
                         style="?materialButtonOutlinedStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
                         app:icon="@drawable/ic_outline_play_arrow_24"
                         android:layout_marginEnd="@dimen/card_button_margin"
-                        android:text="@string/walkthrough" />
+                        android:text="@string/solar_system" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 

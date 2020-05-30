@@ -28,8 +28,8 @@
     <string name="music">Music</string>
     <string name="messages_card_body">Use Material Fade transition to show the Floating Action Button and Material Container Transform to transform the FAB into a menu</string>
     <string name="notes_card_body">Use Material Container Transform to transform a FAB into an Activity and a Material Card View into an Activity</string>
-    <string name="walkthrough_card_body">Use Material Shared Axis Y transition to introduce the main features of an Application</string>
-    <string name="solar_system_card_body">Use Material Shared Axis X transition in a Material Stepper</string>
-    <string name="music_card_body">Use Material Fade Through to switch between views that do not have a strong relationship to each other</string>
+    <string name="walkthrough_card_body">Use Material Shared Axis X transition to introduce the main features of an Application</string>
+    <string name="solar_system_card_body">Use Material Shared Axis Y transition in a Material Stepper</string>
+    <string name="music_card_body">Use Material Fade Through to switch between views that do not have a strong relationship to each other and Material Container Transform with Android Navigation Component</string>
     <string name="sign_in_card_body">Use Material Shared Axis Z to represent App\'s hierarchy. For example, a transition between the application when the user logs in or not</string>
 </resources>

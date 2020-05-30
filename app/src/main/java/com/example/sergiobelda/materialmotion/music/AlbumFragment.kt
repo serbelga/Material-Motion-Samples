@@ -1,7 +1,6 @@
 package com.example.sergiobelda.materialmotion.music
 
 import android.graphics.Bitmap
-import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -71,7 +70,7 @@ class AlbumFragment : Fragment() {
         MaterialContainerTransform().apply {
             drawingViewId = R.id.nav_host_fragment
             interpolator = FastOutSlowInInterpolator()
-            containerColor = MaterialColors.getColor(binding.root, R.attr.colorSurface)
+            containerColor = MaterialColors.getColor(requireActivity().findViewById(android.R.id.content), R.attr.colorSurface)
             fadeMode = MaterialContainerTransform.FADE_MODE_OUT
             duration = 300
         }
