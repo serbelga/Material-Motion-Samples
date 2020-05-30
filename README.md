@@ -8,32 +8,57 @@ A collection of samples using Material Components Transitions for Android
 <img src="https://github.com/serbelga/material_motion_samples/workflows/Android%20CI/badge.svg">
 </p>
 
-<h2>Material Container Transform</h2>
+<p align="center">
+<img width="260" src="./screenshots/menu.png">
+</p>
 
-<h3 align="left">Fab to Menu</h3>
+<h2>Messages</h2>
 
-<img align="center" width="260" src="./screenshots/fab_to_menu.gif">
+Use Material Fade transition to show the Floating Action Button and Material Container Transform to transform the FAB into a menu
 
-It implements an expanded FAB transition to transform the FAB into a menu with related actions. It uses the [Material Container Transform](https://material.io/design/motion/the-motion-system.html#container-transform) transition to transform a view.
+<p align="center">
+  <img align="center" src="./screenshots/fade_fab.gif" width="260">
+  <img align="center" width="260" src="./screenshots/fab_to_menu.gif">
+</p>
 
-<h3 align="left">Fab to Activity</h3>
+<h2>Notes</h2>
 
-<img align="center" width="260" src="./screenshots/fab_to_activity.gif">
+Use Material Container Transform to transform a FAB into an Activity and a Material Card View into an Activity
 
-<h3 align="left">Material Container Transform with Android Navigation Component</h3>
+<p align="center">
+  <img align="center" src="./screenshots/fab_to_activity.gif" width="260">
+</p>
 
-<img align="center" width="260" src="./screenshots/navigation_container_transform.gif">
+<h2>Walkthrough</h2>
 
-<h2 align="left">Shared Axis</h2>
+Use Material Shared Axis X transition to introduce the main features of an Application
 
-| X-axis | Y-axis | Z-axis |
-|---|---|---|
-| <img align="center" src="./screenshots/shared_axis_x.gif" width="260">  |  <img align="center" src="./screenshots/shared_axis_y.gif" width="260"> | <img align="center" src="./screenshots/shared_axis_z.gif" width="260">  |
+<p align="center">
+  <img align="center" src="./screenshots/shared_axis_x.gif" width="260">
+</p>
 
-<h2 align="left">Fade Through</h2>
 
-<img align="center" src="./screenshots/fade_through.gif" width="260">
+<h2>Solar System</h2>
 
-<h2 align="left">Fade</h2>
+Use Material Shared Axis Y transition in a Material Stepper
 
-<img align="center" src="./screenshots/fade_fab.gif" width="260">
+<p align="center">
+  <img align="center" src="./screenshots/shared_axis_y.gif" width="260">
+</p>
+
+<h2>Sign In</h2>
+
+Use Material Shared Axis Z to represent App's hierarchy. For example, a transition between the application when the user logs in or not
+
+<p align="center">
+  <img align="center" src="./screenshots/shared_axis_z.gif" width="260">
+</p>
+
+<h2>Music</h2>
+
+Use Material Fade Through to switch between views that do not have a strong relationship to each other and Material Container Transform with Android Navigation Component
+
+<p align="center">
+  <img align="center" src="./screenshots/fade_through.gif" width="260">
+  <img align="center" src="./screenshots/navigation_container_transform.gif" width="260">
+</p>
