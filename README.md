@@ -6,6 +6,8 @@ A collection of samples using Material Components Transitions for Android
 
 <p align="center">
 <img src="https://github.com/serbelga/material_motion_samples/workflows/Android%20CI/badge.svg">
+<img src="https://img.shields.io/badge/API-23%2B-brightgreen.svg?style=flat">
+<img src="https://img.shields.io/badge/-Medium-%231aa77d?link=https://proandroiddev.com/material-design-motion-for-android-396da62edb1c">
 </p>
 
 <p align="center">
