@@ -65,4 +65,8 @@ class NotesActivity : AppCompatActivity() {
             }
         }
     }
+
+    override fun onBackPressed() {
+        finish()
+    }
 }
