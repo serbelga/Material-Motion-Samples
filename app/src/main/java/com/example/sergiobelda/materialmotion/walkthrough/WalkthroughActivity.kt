@@ -80,13 +80,16 @@ class WalkthroughActivity : AppCompatActivity() {
     }
 
     private fun setSelectedObserver() {
-        selected.observe(this, Observer {
-            binding.nextButton.isEnabled = it < COUNT - 1
-            binding.backButton.isEnabled = it > 0
-            binding.tabLayout.apply {
-                selectTab(getTabAt(it))
+        selected.observe(
+            this,
+            Observer {
+                binding.nextButton.isEnabled = it < COUNT - 1
+                binding.backButton.isEnabled = it > 0
+                binding.tabLayout.apply {
+                    selectTab(getTabAt(it))
+                }
             }
-        })
+        )
     }
 
     private fun selectFragment(forward: Boolean) {

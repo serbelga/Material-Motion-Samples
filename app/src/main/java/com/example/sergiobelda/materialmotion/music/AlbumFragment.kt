@@ -41,23 +41,23 @@ class AlbumFragment : Fragment() {
         binding.album = album
 
         Glide.with(requireContext())
-                .asBitmap()
-                .load(album?.image)
-                .into(object : CustomTarget<Bitmap>() {
-                    override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
-                        val palette = Palette.from(resource).generate()
-                        palette.darkVibrantSwatch?.let {
-                            binding.collapsingToolbar.setBackgroundColor(it.rgb)
-                            val color = requireContext().getColor(R.color.colorOnPrimary)
-                            binding.collapsingToolbar.setCollapsedTitleTextColor(color)
-                            binding.collapsingToolbar.setExpandedTitleColor(color)
-                        } ?: palette.lightVibrantSwatch?.let {
-                            binding.collapsingToolbar.setBackgroundColor(it.rgb)
-                        }
+            .asBitmap()
+            .load(album?.image)
+            .into(object : CustomTarget<Bitmap>() {
+                override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
+                    val palette = Palette.from(resource).generate()
+                    palette.darkVibrantSwatch?.let {
+                        binding.collapsingToolbar.setBackgroundColor(it.rgb)
+                        val color = requireContext().getColor(R.color.colorOnPrimary)
+                        binding.collapsingToolbar.setCollapsedTitleTextColor(color)
+                        binding.collapsingToolbar.setExpandedTitleColor(color)
+                    } ?: palette.lightVibrantSwatch?.let {
+                        binding.collapsingToolbar.setBackgroundColor(it.rgb)
                     }
+                }
 
-                    override fun onLoadCleared(placeholder: Drawable?) {}
-                })
+                override fun onLoadCleared(placeholder: Drawable?) {}
+            })
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
