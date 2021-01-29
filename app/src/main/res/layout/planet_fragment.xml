@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -11,8 +11,8 @@
     </data>
 
     <androidx.core.widget.NestedScrollView
-        android:layout_height="match_parent"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         tools:context=".planets.PlanetFragment">
 
         <LinearLayout
@@ -32,22 +32,22 @@
 
             <TextView
                 android:id="@+id/planet_name"
-                style="?attr/textAppearanceHeadline6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:padding="4dp"
                 android:text="@{planet.name}"
+                android:textAppearance="?attr/textAppearanceHeadline6"
                 tools:text="@tools:sample/lorem" />
 
             <TextView
-                style="?attr/textAppearanceBody1"
-                android:layout_gravity="center"
                 android:id="@+id/planet_description"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:padding="4dp"
                 android:text="@{planet.description}"
+                android:textAppearance="?attr/textAppearanceBody1"
                 tools:text="@tools:sample/lorem/random" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

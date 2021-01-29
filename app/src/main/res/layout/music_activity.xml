@@ -8,35 +8,35 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar_layout"
+        style="@style/Widget.MaterialComponents.AppBarLayout.Surface"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fitsSystemWindows="true"
-        app:elevation="0dp"
-        style="@style/Widget.MaterialComponents.AppBarLayout.Surface">
+        app:elevation="0dp">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
-            app:layout_scrollFlags="scroll|enterAlways|snap"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways|snap">
 
             <com.google.android.material.textview.MaterialTextView
-                style="?attr/textAppearanceHeadline6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/my_library"
+                android:textAppearance="?attr/textAppearanceHeadline6"
                 android:textColor="@color/material_on_surface_emphasis_medium" />
         </com.google.android.material.appbar.MaterialToolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
     <fragment
         android:id="@+id/nav_host_fragment"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:defaultNavHost="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
         app:navGraph="@navigation/nav_graph" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

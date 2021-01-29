@@ -71,7 +71,7 @@
             android:id="@+id/card_recycler_view"
             android:layout_width="match_parent"
             android:layout_height="180dp"
-            android:layout_marginBottom="52dp"/>
+            android:layout_marginBottom="52dp" />
 
         <com.google.android.material.button.MaterialButton
             style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
@@ -80,7 +80,7 @@
             android:layout_gravity="bottom"
             android:insetTop="0dp"
             android:insetBottom="0dp"
-            android:text="Compose New"
+            android:text="@string/compose_new"
             android:backgroundTint="?attr/colorSecondary"
             app:cornerRadius="0dp"
             app:icon="@drawable/ic_outline_edit_24" />

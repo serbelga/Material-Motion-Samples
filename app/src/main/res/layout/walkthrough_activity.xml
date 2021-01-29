@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".walkthrough.WalkthroughActivity">
@@ -16,33 +15,32 @@
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
         android:layout_margin="16dp"
         android:background="@null"
-        app:tabGravity="center"
-        app:tabIndicatorGravity="center"
-        app:tabIndicatorColor="?attr/colorPrimary"
-        app:tabIndicator="@drawable/tab_dot"
         app:tabBackground="@drawable/tab_dot_background"
-        app:tabPaddingStart="6dp"
+        app:tabGravity="center"
+        app:tabIndicator="@drawable/tab_dot"
+        app:tabIndicatorColor="?attr/colorPrimary"
+        app:tabIndicatorGravity="center"
         app:tabPaddingEnd="6dp"
-        android:layout_gravity="bottom">
-    </com.google.android.material.tabs.TabLayout>
+        app:tabPaddingStart="6dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/back_button"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="start|bottom"
         android:layout_margin="16dp"
-        android:text="@string/back"
-        android:layout_gravity="start|bottom" />
+        android:text="@string/back" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/next_button"
         style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
-        android:text="@string/next"
-        android:layout_gravity="end|bottom" />
+        android:text="@string/next" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

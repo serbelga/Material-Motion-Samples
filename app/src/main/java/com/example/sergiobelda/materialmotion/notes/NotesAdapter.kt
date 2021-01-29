@@ -6,7 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.sergiobelda.materialmotion.databinding.ItemNoteBinding
 import com.google.android.material.card.MaterialCardView
 
-class NotesAdapter(private val items: List<Note>) : RecyclerView.Adapter<NotesAdapter.ViewHolder>() {
+class NotesAdapter(private val items: List<Note>) :
+    RecyclerView.Adapter<NotesAdapter.ViewHolder>() {
     lateinit var noteClickListener: NoteClickListener
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =

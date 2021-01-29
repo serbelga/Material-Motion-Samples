@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Observer
 import com.example.sergiobelda.materialmotion.R
 import com.example.sergiobelda.materialmotion.databinding.WalkthroughActivityBinding
 import com.google.android.material.transition.MaterialSharedAxis
@@ -13,9 +12,11 @@ private const val COUNT = 3
 
 class WalkthroughActivity : AppCompatActivity() {
     private lateinit var binding: WalkthroughActivityBinding
+
     private var selected = MutableLiveData<Int>().apply {
         value = 0
     }
+
     private val titles by lazy {
         arrayListOf(
             getString(R.string.upload_your_photos),
@@ -23,6 +24,7 @@ class WalkthroughActivity : AppCompatActivity() {
             getString(R.string.invite_friends)
         )
     }
+
     private val bodies by lazy {
         arrayListOf(
             getString(R.string.upload_artistic_photos),
@@ -30,6 +32,7 @@ class WalkthroughActivity : AppCompatActivity() {
             getString(R.string.enjoy_rewards)
         )
     }
+
     private val images = arrayListOf(
         R.drawable.undraw_drag,
         R.drawable.undraw_social_sharing,
@@ -82,7 +85,7 @@ class WalkthroughActivity : AppCompatActivity() {
     private fun setSelectedObserver() {
         selected.observe(
             this,
-            Observer {
+            {
                 binding.nextButton.isEnabled = it < COUNT - 1
                 binding.backButton.isEnabled = it > 0
                 binding.tabLayout.apply {

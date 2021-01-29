@@ -14,7 +14,8 @@ import com.example.sergiobelda.materialmotion.R
 import com.example.sergiobelda.materialmotion.databinding.ItemAlbumBinding
 import com.google.android.material.card.MaterialCardView
 
-class AlbumsAdapter(private val items: List<Album>, private val context: Context) : RecyclerView.Adapter<AlbumsAdapter.ViewHolder>() {
+class AlbumsAdapter(private val items: List<Album>, private val context: Context) :
+    RecyclerView.Adapter<AlbumsAdapter.ViewHolder>() {
     lateinit var albumClickListener: AlbumClickListener
 
     inner class ViewHolder(val binding: ItemAlbumBinding) : RecyclerView.ViewHolder(binding.root) {
@@ -24,7 +25,10 @@ class AlbumsAdapter(private val items: List<Album>, private val context: Context
                 .asBitmap()
                 .load(album.image)
                 .into(object : CustomTarget<Bitmap>() {
-                    override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
+                    override fun onResourceReady(
+                        resource: Bitmap,
+                        transition: Transition<in Bitmap>?
+                    ) {
                         val palette = Palette.from(resource).generate()
                         palette.darkVibrantSwatch?.let {
                             binding.albumCard.setCardBackgroundColor(it.rgb)

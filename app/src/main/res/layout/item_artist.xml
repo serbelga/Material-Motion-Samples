@@ -29,11 +29,11 @@
                 tools:src="?attr/colorPrimary" />
 
             <com.google.android.material.textview.MaterialTextView
-                style="?attr/textAppearanceBody1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@{artist.name}"
+                android:textAppearance="?attr/textAppearanceBody1"
                 tools:text="Artist" />
         </LinearLayout>
     </FrameLayout>

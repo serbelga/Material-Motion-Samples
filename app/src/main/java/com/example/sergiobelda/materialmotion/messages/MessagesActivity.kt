@@ -22,11 +22,12 @@ class MessagesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = MessagesActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
-        setClickListeners()
-        setRecyclerViews()
+        initClickListeners()
+        initRecyclerViews()
         binding.floatingActionButton.post {
             val transition = MaterialFade().apply {
                 duration = 2000
@@ -36,7 +37,7 @@ class MessagesActivity : AppCompatActivity() {
         }
     }
 
-    private fun setClickListeners() {
+    private fun initClickListeners() {
         binding.floatingActionButton.setOnClickListener {
             val transition = buildContainerTransformation()
 
@@ -68,7 +69,7 @@ class MessagesActivity : AppCompatActivity() {
         }
     }
 
-    private fun setRecyclerViews() {
+    private fun initRecyclerViews() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = MessagesAdapter(messages)
         binding.recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {

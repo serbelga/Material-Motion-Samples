@@ -14,7 +14,7 @@
         android:id="@+id/albumsFragment"
         android:name="com.example.sergiobelda.materialmotion.music.AlbumsFragment"
         android:label="albums_fragment"
-        tools:layout="@layout/albums_fragment" >
+        tools:layout="@layout/albums_fragment">
         <action
             android:id="@+id/navToAlbumFragment"
             app:destination="@id/albumFragment" />
@@ -28,7 +28,7 @@
         android:id="@+id/albumFragment"
         android:name="com.example.sergiobelda.materialmotion.music.AlbumFragment"
         android:label="album_fragment"
-        tools:layout="@layout/album_fragment" >
+        tools:layout="@layout/album_fragment">
         <argument
             android:name="albumId"
             app:argType="integer" />

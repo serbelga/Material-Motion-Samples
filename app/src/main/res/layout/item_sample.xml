@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="sample"
+            type="com.example.sergiobelda.materialmotion.sample.SampleItem" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/card_body_margin"
+                android:ellipsize="end"
+                android:maxLines="5"
+                android:text="@{sample.descriptionRes}"
+                android:textAppearance="?attr/textAppearanceBody1"
+                tools:text="@string/messages_card_body" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button"
+                style="?materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/card_button_margin"
+                android:text="@{sample.nameRes}"
+                app:icon="@drawable/ic_outline_play_arrow_24"
+                tools:text="@string/messages" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

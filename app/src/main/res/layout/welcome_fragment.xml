@@ -14,12 +14,12 @@
         android:text="@string/return_to" />
 
     <TextView
-        style="?attr/textAppearanceHeadline6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
         android:layout_marginTop="96dp"
-        android:text="Hi there!" />
+        android:text="@string/hi_there"
+        android:textAppearance="?attr/textAppearanceHeadline6" />
 
     <ImageView
         android:layout_width="240dp"

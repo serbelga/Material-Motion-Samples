@@ -4,5 +4,5 @@
     android:innerRadius="0dp"
     android:thickness="4dp"
     android:useLevel="false">
-    <size android:height="8dp"/>
+    <size android:height="8dp" />
 </shape>
