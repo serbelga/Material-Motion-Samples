@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MaterialMotion</string>
+    <string name="app_name">Material Motion Samples</string>
     <string name="artists">Artists</string>
     <string name="albums">Albums</string>
     <string name="playlists">Playlists</string>
@@ -32,4 +32,6 @@
     <string name="solar_system_card_body">Use Material Shared Axis Y transition in a Material Stepper</string>
     <string name="music_card_body">Use Material Fade Through to switch between views that do not have a strong relationship to each other and Material Container Transform with Android Navigation Component</string>
     <string name="sign_in_card_body">Use Material Shared Axis Z to represent App\'s hierarchy. For example, a transition between the application when the user logs in or not</string>
+    <string name="hi_there">Hi there!</string>
+    <string name="compose_new">Compose New</string>
 </resources>

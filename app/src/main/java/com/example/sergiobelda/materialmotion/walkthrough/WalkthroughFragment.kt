@@ -38,7 +38,7 @@ class WalkthroughFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = WalkthroughFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }

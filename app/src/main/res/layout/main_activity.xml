@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -20,232 +19,37 @@
             <com.google.android.material.appbar.MaterialToolbar
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"/>
+                app:layout_collapseMode="pin" />
 
             <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
                 android:layout_gravity="center"
                 android:layout_margin="4dp"
+                android:gravity="center_vertical"
                 app:layout_collapseMode="pin">
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/material_components"
+                    android:src="@drawable/material_motion"
                     app:shapeAppearance="?attr/shapeAppearanceMediumComponent" />
 
                 <com.google.android.material.textview.MaterialTextView
-                    style="?attr/textAppearanceHeadline6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Material Motion Samples"
+                    android:text="@string/app_name"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
                     android:textColor="@color/material_on_surface_emphasis_medium" />
             </LinearLayout>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.core.widget.NestedScrollView
-        android:paddingBottom="?attr/actionBarSize"
-        android:clipToPadding="false"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/card_margin">
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        style="?attr/textAppearanceBody1"
-                        android:maxLines="5"
-                        android:ellipsize="end"
-                        android:text="@string/messages_card_body"
-                        android:layout_margin="@dimen/card_body_margin"/>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/email"
-                        style="?materialButtonOutlinedStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="end"
-                        app:icon="@drawable/ic_outline_play_arrow_24"
-                        android:layout_marginEnd="@dimen/card_button_margin"
-                        android:text="@string/messages" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/card_margin">
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        style="?attr/textAppearanceBody1"
-                        android:maxLines="5"
-                        android:ellipsize="end"
-                        android:text="@string/notes_card_body"
-                        android:layout_margin="@dimen/card_body_margin"/>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/notes"
-                        style="?materialButtonOutlinedStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="end"
-                        app:icon="@drawable/ic_outline_play_arrow_24"
-                        android:layout_marginEnd="@dimen/card_button_margin"
-                        android:text="@string/notes" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/card_margin">
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        style="?attr/textAppearanceBody1"
-                        android:maxLines="5"
-                        android:ellipsize="end"
-                        android:text="@string/walkthrough_card_body"
-                        android:layout_margin="@dimen/card_body_margin"/>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/walkthrough"
-                        style="?materialButtonOutlinedStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="end"
-                        app:icon="@drawable/ic_outline_play_arrow_24"
-                        android:layout_marginEnd="@dimen/card_button_margin"
-                        android:text="@string/walkthrough" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/card_margin">
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        style="?attr/textAppearanceBody1"
-                        android:maxLines="5"
-                        android:ellipsize="end"
-                        android:text="@string/solar_system_card_body"
-                        android:layout_margin="@dimen/card_body_margin"/>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/solar_system"
-                        style="?materialButtonOutlinedStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="end"
-                        app:icon="@drawable/ic_outline_play_arrow_24"
-                        android:layout_marginEnd="@dimen/card_button_margin"
-                        android:text="@string/solar_system" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/card_margin">
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        style="?attr/textAppearanceBody1"
-                        android:maxLines="5"
-                        android:ellipsize="end"
-                        android:text="@string/sign_in_card_body"
-                        android:layout_margin="@dimen/card_body_margin"/>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/sign_in"
-                        style="?materialButtonOutlinedStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="end"
-                        app:icon="@drawable/ic_outline_play_arrow_24"
-                        android:layout_marginEnd="@dimen/card_button_margin"
-                        android:text="@string/sign_in" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/card_margin">
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        style="?attr/textAppearanceBody1"
-                        android:maxLines="5"
-                        android:ellipsize="end"
-                        android:text="@string/music_card_body"
-                        android:layout_margin="@dimen/card_body_margin"/>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/music"
-                        style="?materialButtonOutlinedStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="end"
-                        app:icon="@drawable/ic_outline_play_arrow_24"
-                        android:layout_marginEnd="@dimen/card_button_margin"
-                        android:text="@string/music" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -16,17 +16,18 @@ class NoteDetailActivity : AppCompatActivity() {
         window.requestFeature(Window.FEATURE_ACTIVITY_TRANSITIONS)
         binding = NoteDetailActivityBinding.inflate(layoutInflater)
         val noteId = intent.getIntExtra("noteId", 0)
-        val note = notes.find { it.id == noteId }
-        binding.note = note
         binding.coordinator.transitionName = noteId.toString()
         setEnterSharedElementCallback(MaterialContainerTransformSharedElementCallback())
         window.sharedElementEnterTransition = buildContainerTransform()
         window.sharedElementReturnTransition = buildContainerTransform()
         setContentView(binding.root)
         super.onCreate(savedInstanceState)
+
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
+        val note = notes.find { it.id == noteId }
+        binding.note = note
     }
 
     private fun buildContainerTransform() =

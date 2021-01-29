@@ -15,34 +15,34 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/note_card"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
             android:layout_gravity="center"
+            android:layout_margin="8dp"
             android:clickable="true"
             android:focusable="true"
-            android:layout_margin="8dp"
-            app:cardBackgroundColor="@{context.resources.getColor(note.colorRes)}"
-            android:layout_width="match_parent"
-            android:layout_height="200dp">
+            app:cardBackgroundColor="@{context.resources.getColor(note.colorRes)}">
 
             <LinearLayout
-                android:padding="16dp"
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
 
                 <com.google.android.material.textview.MaterialTextView
-                    style="?attr/textAppearanceBody1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{note.title}" />
+                    android:text="@{note.title}"
+                    android:textAppearance="?attr/textAppearanceBody1" />
 
                 <com.google.android.material.textview.MaterialTextView
-                    style="?attr/textAppearanceCaption"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
                     android:ellipsize="end"
                     android:maxLines="10"
-                    android:layout_marginTop="8dp"
-                    android:text="@{note.body}" />
+                    android:text="@{note.body}"
+                    android:textAppearance="?attr/textAppearanceCaption" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
     </FrameLayout>

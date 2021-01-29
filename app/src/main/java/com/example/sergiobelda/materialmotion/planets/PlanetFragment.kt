@@ -32,7 +32,7 @@ class PlanetFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.planet_fragment, container, false)
         binding.lifecycleOwner = viewLifecycleOwner
         return binding.root

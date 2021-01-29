@@ -34,21 +34,21 @@
                     android:layout_width="200dp"
                     android:layout_height="200dp"
                     android:scaleType="centerCrop"
-                    app:shapeAppearance="@style/ShapeAppearance.AlbumImageView"
-                    app:image_url="@{album.image}" />
+                    app:image_url="@{album.image}"
+                    app:shapeAppearance="@style/ShapeAppearance.AlbumImageView" />
 
                 <com.google.android.material.textview.MaterialTextView
-                    style="?attr/textAppearanceBody2"
                     android:id="@+id/album_name"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_height="0dp"
                     android:layout_gravity="bottom"
                     android:layout_marginStart="24dp"
                     android:layout_marginEnd="24dp"
-                    android:maxLines="2"
+                    android:layout_weight="1"
                     android:gravity="center_vertical"
+                    android:maxLines="2"
                     android:text="@{album.name}"
+                    android:textAppearance="?attr/textAppearanceBody2"
                     android:textColor="?attr/colorOnSurface"
                     tools:text="Album Name" />
             </LinearLayout>

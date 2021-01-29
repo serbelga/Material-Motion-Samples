@@ -3,13 +3,11 @@ package com.example.sergiobelda.materialmotion
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sergiobelda.materialmotion.databinding.MainActivityBinding
-import com.example.sergiobelda.materialmotion.messages.MessagesActivity
-import com.example.sergiobelda.materialmotion.music.MusicActivity
-import com.example.sergiobelda.materialmotion.notes.NotesActivity
-import com.example.sergiobelda.materialmotion.planets.PlanetsActivity
-import com.example.sergiobelda.materialmotion.signin.SignInActivity
-import com.example.sergiobelda.materialmotion.walkthrough.WalkthroughActivity
+import com.example.sergiobelda.materialmotion.sample.SampleItem
+import com.example.sergiobelda.materialmotion.sample.SamplesAdapter
+import com.example.sergiobelda.materialmotion.sample.samples
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: MainActivityBinding
@@ -19,29 +17,16 @@ class MainActivity : AppCompatActivity() {
         binding = MainActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.solarSystem.setOnClickListener {
-            val intent = Intent(this, PlanetsActivity::class.java)
-            startActivity(intent)
+        val samplesAdapter = SamplesAdapter(samples).apply {
+            listener = object : SamplesAdapter.OnSampleClickListener {
+                override fun onSampleClick(sampleItem: SampleItem) {
+                    startActivity(Intent(this@MainActivity, sampleItem.activity))
+                }
+            }
         }
-        binding.walkthrough.setOnClickListener {
-            val intent = Intent(this, WalkthroughActivity::class.java)
-            startActivity(intent)
-        }
-        binding.signIn.setOnClickListener {
-            val intent = Intent(this, SignInActivity::class.java)
-            startActivity(intent)
-        }
-        binding.music.setOnClickListener {
-            val intent = Intent(this, MusicActivity::class.java)
-            startActivity(intent)
-        }
-        binding.notes.setOnClickListener {
-            val intent = Intent(this, NotesActivity::class.java)
-            startActivity(intent)
-        }
-        binding.email.setOnClickListener {
-            val intent = Intent(this, MessagesActivity::class.java)
-            startActivity(intent)
+        binding.recyclerView.apply {
+            layoutManager = LinearLayoutManager(this@MainActivity)
+            adapter = samplesAdapter
         }
     }
 }

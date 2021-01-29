@@ -19,7 +19,7 @@ class PlaylistsFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         return inflater.inflate(R.layout.playlists_fragment, container, false)
     }
 }

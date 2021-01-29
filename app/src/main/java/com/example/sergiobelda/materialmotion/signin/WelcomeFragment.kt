@@ -23,7 +23,7 @@ class WelcomeFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = WelcomeFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }

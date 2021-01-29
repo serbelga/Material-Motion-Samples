@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -25,11 +25,11 @@
                 android:id="@+id/collapsing_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="480dp"
-                app:title="@{album.name}"
                 app:collapsedTitleGravity="center"
-                app:expandedTitleTextAppearance="?attr/textAppearanceHeadline5"
                 app:collapsedTitleTextAppearance="?attr/textAppearanceHeadline6"
-                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+                app:expandedTitleTextAppearance="?attr/textAppearanceHeadline5"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                app:title="@{album.name}">
 
                 <com.google.android.material.appbar.MaterialToolbar
                     android:id="@+id/toolbar"
@@ -39,18 +39,15 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
                     android:layout_marginBottom="81dp"
+                    android:scaleType="centerCrop"
                     app:image_url="@{album.image}" />
             </com.google.android.material.appbar.CollapsingToolbarLayout>
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

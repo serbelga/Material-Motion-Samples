@@ -21,12 +21,12 @@
             android:layout_height="wrap_content">
 
             <com.google.android.material.textview.MaterialTextView
-                style="?attr/textAppearanceHeadline6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textColor="@color/material_on_surface_emphasis_medium"
-                android:text="@string/add_note" />
+                android:text="@string/add_note"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textColor="@color/material_on_surface_emphasis_medium" />
         </com.google.android.material.appbar.MaterialToolbar>
 
         <View
@@ -51,9 +51,9 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:maxLines="1"
+                android:imeOptions="actionDone"
                 android:inputType="text"
-                android:imeOptions="actionDone"/>
+                android:maxLines="1" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -66,7 +66,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="240dp"
-                android:gravity="start"/>
+                android:gravity="start" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
