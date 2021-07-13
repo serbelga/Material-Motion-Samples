@@ -1,7 +1,7 @@
 <h1 align="center">Material Motion Samples</h1></br>
 
 <h5 align="center">
-A collection of samples using Material Components Transitions for Android
+A collection of samples using Material Components Motion for Android
 </h5>
 
 <p align="center">
