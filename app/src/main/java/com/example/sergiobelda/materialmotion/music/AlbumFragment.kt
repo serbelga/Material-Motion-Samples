@@ -52,7 +52,7 @@ class AlbumFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.coordinator.transitionName = args.albumId.toString()
+        binding.albumFragmentRoot.transitionName = args.albumId.toString()
         val album = albums.find { it.id == args.albumId }
         binding.album = album
 
@@ -78,12 +78,12 @@ class AlbumFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        sharedElementEnterTransition = buildContainerTransform()
-        sharedElementReturnTransition = buildContainerTransform()
+        sharedElementEnterTransition = buildContainerTransform(true)
+        sharedElementReturnTransition = buildContainerTransform(false)
     }
 
-    private fun buildContainerTransform() =
-        MaterialContainerTransform().apply {
+    private fun buildContainerTransform(entering: Boolean) =
+        MaterialContainerTransform(requireContext(), entering).apply {
             drawingViewId = R.id.nav_host_fragment
             interpolator = FastOutSlowInInterpolator()
             containerColor = MaterialColors.getColor(requireActivity().findViewById(android.R.id.content), R.attr.colorSurface)

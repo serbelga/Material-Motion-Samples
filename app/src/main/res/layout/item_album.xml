@@ -10,48 +10,42 @@
             type="com.example.sergiobelda.materialmotion.music.Album" />
     </data>
 
-    <FrameLayout
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/album_card"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardPreventCornerOverlap="false"
+        app:shapeAppearance="@style/ShapeAppearance.AlbumCardView">
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/album_card"
-            android:layout_width="200dp"
-            android:layout_height="250dp"
-            android:layout_gravity="center"
-            android:layout_margin="8dp"
-            android:clickable="true"
-            android:focusable="true"
-            app:cardPreventCornerOverlap="false"
-            app:shapeAppearance="@style/ShapeAppearance.AlbumCardView">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <LinearLayout
+            <com.google.android.material.imageview.ShapeableImageView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                app:image_url="@{album.image}"
+                app:shapeAppearance="@style/ShapeAppearance.AlbumImageView" />
 
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
-                    android:scaleType="centerCrop"
-                    app:image_url="@{album.image}"
-                    app:shapeAppearance="@style/ShapeAppearance.AlbumImageView" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/album_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_gravity="bottom"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_weight="1"
-                    android:gravity="center_vertical"
-                    android:maxLines="2"
-                    android:text="@{album.name}"
-                    android:textAppearance="?attr/textAppearanceBody2"
-                    android:textColor="?attr/colorOnSurface"
-                    tools:text="Album Name" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-    </FrameLayout>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/album_name"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="bottom"
+                android:layout_margin="16dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:text="@{album.name}"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?attr/colorOnSurface"
+                tools:text="Album Name" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 </layout>

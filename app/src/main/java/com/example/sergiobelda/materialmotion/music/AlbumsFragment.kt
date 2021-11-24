@@ -48,6 +48,9 @@ class AlbumsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        postponeEnterTransition()
+        binding.recyclerView.post { startPostponedEnterTransition() }
+
         val adapter = AlbumsAdapter(albums, requireContext())
         adapter.albumClickListener = object : AlbumsAdapter.AlbumClickListener {
             override fun onAlbumClick(id: Int, cardView: MaterialCardView) {

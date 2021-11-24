@@ -19,10 +19,10 @@
 
     <style name="ShapeAppearance.AlbumCardView" parent="ShapeAppearance.MaterialComponents.MediumComponent">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSizeTopRight">32dp</item>
-        <item name="cornerSizeTopLeft">8dp</item>
-        <item name="cornerSizeBottomRight">8dp</item>
-        <item name="cornerSizeBottomLeft">32dp</item>
+        <item name="cornerSizeTopRight">8dp</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeBottomRight">16dp</item>
+        <item name="cornerSizeBottomLeft">8dp</item>
     </style>
 
     <style name="ShapeAppearance.AlbumImageView" parent="ShapeAppearance.AlbumCardView">
