@@ -35,7 +35,7 @@ class SpotlessConventionPlugin : Plugin<Project> {
                     // ktlint
                     ktlint()
                         .setUseExperimental(true)
-                        // .userData(mapOf("android" to "true"))
+                        .userData(mapOf("android" to "true"))
                 }
                 format("kts") {
                     target("**/*.kts")
