@@ -6,7 +6,7 @@ A collection of samples using Material Components Motion for Android
 
 <p align="center">
 <img src="https://github.com/serbelga/material_motion_samples/workflows/Android%20CI/badge.svg">
-<img src="https://img.shields.io/badge/API-23%2B-brightgreen.svg?style=flat">
+<img src="https://img.shields.io/badge/API-24%2B-brightgreen.svg?style=flat">
 </p>
 
 <p align="center">
