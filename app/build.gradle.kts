@@ -11,7 +11,7 @@ android {
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "dev.sergiobelda.materialmotionsamples"
+        applicationId = "dev.sergiobelda.samples.materialmotion"
         minSdk = 24
         targetSdk = 33
         versionCode = 1
@@ -41,7 +41,7 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
-    namespace = "dev.sergiobelda.materialmotionsamples"
+    namespace = "dev.sergiobelda.samples.materialmotion"
 }
 
 dependencies {

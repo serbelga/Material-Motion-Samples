@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
      Copyright 2021 Sergio Belda
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -18,7 +17,7 @@
 
         <variable
             name="note"
-            type="dev.sergiobelda.materialmotionsamples.notes.Note" />
+            type="dev.sergiobelda.samples.materialmotion.notes.Note" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout

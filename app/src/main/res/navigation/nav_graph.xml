@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
      Copyright 2021 Sergio Belda
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -20,11 +19,11 @@
 
     <fragment
         android:id="@+id/artistsFragment"
-        android:name="dev.sergiobelda.materialmotionsamples.music.ArtistsFragment"
+        android:name="dev.sergiobelda.samples.materialmotion.music.ArtistsFragment"
         tools:layout="@layout/artists_fragment" />
     <fragment
         android:id="@+id/albumsFragment"
-        android:name="dev.sergiobelda.materialmotionsamples.music.AlbumsFragment"
+        android:name="dev.sergiobelda.samples.materialmotion.music.AlbumsFragment"
         tools:layout="@layout/albums_fragment">
         <action
             android:id="@+id/navToAlbumFragment"
@@ -32,11 +31,11 @@
     </fragment>
     <fragment
         android:id="@+id/playlistsFragment"
-        android:name="dev.sergiobelda.materialmotionsamples.music.PlaylistsFragment"
+        android:name="dev.sergiobelda.samples.materialmotion.music.PlaylistsFragment"
         tools:layout="@layout/playlists_fragment" />
     <fragment
         android:id="@+id/albumFragment"
-        android:name="dev.sergiobelda.materialmotionsamples.music.AlbumFragment"
+        android:name="dev.sergiobelda.samples.materialmotion.music.AlbumFragment"
         tools:layout="@layout/album_fragment">
         <argument
             android:name="albumId"

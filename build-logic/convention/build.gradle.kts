@@ -2,7 +2,7 @@ plugins {
     `kotlin-dsl`
 }
 
-group = "dev.sergiobelda.materialmotionsamples.buildlogic"
+group = "dev.sergiobelda.samples.materialmotion.buildlogic"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_11

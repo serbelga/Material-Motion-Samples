@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
      Copyright 2021 Sergio Belda
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,11 +11,10 @@
      limitations under the License.
 -->
 
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
         android:allowBackup="true"
@@ -26,31 +24,31 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".signin.SignInActivity"
-            android:screenOrientation="portrait"/>
+            android:name="dev.sergiobelda.samples.materialmotion.signin.SignInActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".walkthrough.WalkthroughActivity"
-            android:screenOrientation="portrait"/>
+            android:name="dev.sergiobelda.samples.materialmotion.walkthrough.WalkthroughActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".notes.NoteDetailActivity"
-            android:screenOrientation="portrait"/>
+            android:name="dev.sergiobelda.samples.materialmotion.notes.NoteDetailActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".notes.AddNoteActivity"
-            android:screenOrientation="portrait"/>
+            android:name="dev.sergiobelda.samples.materialmotion.notes.AddNoteActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".notes.NotesActivity"
-            android:screenOrientation="portrait"/>
+            android:name="dev.sergiobelda.samples.materialmotion.notes.NotesActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".messages.MessagesActivity"
-            android:screenOrientation="portrait"/>
+            android:name="dev.sergiobelda.samples.materialmotion.messages.MessagesActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".music.MusicActivity"
-            android:screenOrientation="portrait"/>
+            android:name="dev.sergiobelda.samples.materialmotion.music.MusicActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".planets.PlanetsActivity"
-            android:screenOrientation="portrait"/>
+            android:name="dev.sergiobelda.samples.materialmotion.planets.PlanetsActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".MainActivity"
+            android:name="dev.sergiobelda.samples.materialmotion.MainActivity"
             android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
