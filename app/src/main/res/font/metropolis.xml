@@ -16,14 +16,11 @@
 
     <font
         android:font="@font/metropolis_medium"
-        android:fontWeight="500">
-    </font>
+        android:fontWeight="500"></font>
     <font
         android:font="@font/metropolis_regular"
-        android:fontWeight="400">
-    </font>
+        android:fontWeight="400"></font>
     <font
         android:font="@font/metropolis_semibold"
-        android:fontWeight="600">
-    </font>
+        android:fontWeight="600"></font>
 </font-family>
