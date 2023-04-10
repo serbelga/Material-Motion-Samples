@@ -17,7 +17,7 @@ dependencies {
 gradlePlugin {
     plugins {
         register("spotless") {
-            id = "materialmotionsamples.spotless"
+            id = "samples.materialmotion.spotless"
             implementationClass = "SpotlessConventionPlugin"
         }
     }

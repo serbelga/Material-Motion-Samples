@@ -4,7 +4,7 @@ plugins {
     kotlin("android")
     kotlin("kapt")
     alias(libs.plugins.navigationSafeArgs)
-    id("materialmotionsamples.spotless")
+    id("samples.materialmotion.spotless")
 }
 
 android {

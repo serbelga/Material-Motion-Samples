@@ -13,5 +13,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "MaterialMotionSamples"
+rootProject.name = "Material-Motion-Samples"
 include(":app")
