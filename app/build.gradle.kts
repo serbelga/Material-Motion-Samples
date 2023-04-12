@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     kotlin("android")
     kotlin("kapt")
+    alias(libs.plugins.ksp)
     alias(libs.plugins.navigationSafeArgs)
     id("samples.materialmotion.spotless")
 }
@@ -53,7 +54,7 @@ dependencies {
     implementation(libs.androidx.paletteKtx)
     implementation(libs.google.material)
     implementation(libs.glide)
-    kapt(libs.glide.compiler)
+    ksp(libs.glide.compiler)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.androidx.test.espresso.core)
     testImplementation(libs.junit)
