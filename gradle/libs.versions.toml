@@ -10,7 +10,7 @@ junit = "4.13.2"
 kotlin = "1.8.22"
 ksp = "1.8.21-1.0.11"
 material = "1.9.0"
-navigation = "2.5.3"
+navigation = "2.6.0"
 palette = "1.0.0"
 spotless = "6.19.0"
 
