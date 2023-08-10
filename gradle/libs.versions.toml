@@ -12,7 +12,7 @@ ksp = "1.9.0-1.0.13"
 material = "1.9.0"
 navigation = "2.7.0"
 palette = "1.0.0"
-spotless = "6.19.0"
+spotless = "6.20.0"
 
 [libraries]
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
