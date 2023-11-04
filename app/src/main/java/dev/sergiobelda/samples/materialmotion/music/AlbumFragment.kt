@@ -50,7 +50,10 @@ class AlbumFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(
+        view: View,
+        savedInstanceState: Bundle?,
+    ) {
         super.onViewCreated(view, savedInstanceState)
         binding.albumFragmentRoot.transitionName = args.albumId.toString()
         val album = albums.find { it.id == args.albumId }
@@ -59,21 +62,26 @@ class AlbumFragment : Fragment() {
         Glide.with(requireContext())
             .asBitmap()
             .load(album?.image)
-            .into(object : CustomTarget<Bitmap>() {
-                override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
-                    val palette = Palette.from(resource).generate()
-                    palette.darkVibrantSwatch?.let {
-                        binding.collapsingToolbar.setBackgroundColor(it.rgb)
-                        val color = requireContext().getColor(R.color.colorOnPrimary)
-                        binding.collapsingToolbar.setCollapsedTitleTextColor(color)
-                        binding.collapsingToolbar.setExpandedTitleColor(color)
-                    } ?: palette.lightVibrantSwatch?.let {
-                        binding.collapsingToolbar.setBackgroundColor(it.rgb)
+            .into(
+                object : CustomTarget<Bitmap>() {
+                    override fun onResourceReady(
+                        resource: Bitmap,
+                        transition: Transition<in Bitmap>?,
+                    ) {
+                        val palette = Palette.from(resource).generate()
+                        palette.darkVibrantSwatch?.let {
+                            binding.collapsingToolbar.setBackgroundColor(it.rgb)
+                            val color = requireContext().getColor(R.color.colorOnPrimary)
+                            binding.collapsingToolbar.setCollapsedTitleTextColor(color)
+                            binding.collapsingToolbar.setExpandedTitleColor(color)
+                        } ?: palette.lightVibrantSwatch?.let {
+                            binding.collapsingToolbar.setBackgroundColor(it.rgb)
+                        }
                     }
-                }
 
-                override fun onLoadCleared(placeholder: Drawable?) {}
-            })
+                    override fun onLoadCleared(placeholder: Drawable?) {}
+                },
+            )
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -86,10 +94,11 @@ class AlbumFragment : Fragment() {
         MaterialContainerTransform(requireContext(), entering).apply {
             drawingViewId = R.id.nav_host_fragment
             interpolator = FastOutSlowInInterpolator()
-            containerColor = MaterialColors.getColor(
-                requireActivity().findViewById(android.R.id.content),
-                R.attr.colorSurface,
-            )
+            containerColor =
+                MaterialColors.getColor(
+                    requireActivity().findViewById(android.R.id.content),
+                    R.attr.colorSurface,
+                )
             fadeMode = MaterialContainerTransform.FADE_MODE_OUT
             duration = 300
         }

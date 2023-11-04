@@ -46,21 +46,29 @@ class AlbumsFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(
+        view: View,
+        savedInstanceState: Bundle?,
+    ) {
         super.onViewCreated(view, savedInstanceState)
         postponeEnterTransition()
         binding.recyclerView.post { startPostponedEnterTransition() }
 
         val adapter = AlbumsAdapter(albums, requireContext())
-        adapter.albumClickListener = object : AlbumsAdapter.AlbumClickListener {
-            override fun onAlbumClick(id: Int, cardView: MaterialCardView) {
-                val extras = FragmentNavigatorExtras(
-                    cardView to id.toString(),
-                )
-                val action = AlbumsFragmentDirections.navToAlbumFragment(id)
-                findNavController().navigate(action, extras)
+        adapter.albumClickListener =
+            object : AlbumsAdapter.AlbumClickListener {
+                override fun onAlbumClick(
+                    id: Int,
+                    cardView: MaterialCardView,
+                ) {
+                    val extras =
+                        FragmentNavigatorExtras(
+                            cardView to id.toString(),
+                        )
+                    val action = AlbumsFragmentDirections.navToAlbumFragment(id)
+                    findNavController().navigate(action, extras)
+                }
             }
-        }
         binding.recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
         binding.recyclerView.adapter = adapter
     }

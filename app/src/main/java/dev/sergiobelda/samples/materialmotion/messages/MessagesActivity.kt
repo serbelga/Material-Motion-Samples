@@ -45,9 +45,10 @@ class MessagesActivity : AppCompatActivity() {
         initClickListeners()
         initRecyclerViews()
         binding.floatingActionButton.post {
-            val transition = MaterialFade().apply {
-                duration = 2000
-            }
+            val transition =
+                MaterialFade().apply {
+                    duration = 2000
+                }
             TransitionManager.beginDelayedTransition(findViewById(android.R.id.content), transition)
             binding.floatingActionButton.visibility = View.VISIBLE
         }
@@ -88,7 +89,8 @@ class MessagesActivity : AppCompatActivity() {
     private fun initRecyclerViews() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = MessagesAdapter(messages)
-        binding.recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+        binding.recyclerView.addOnScrollListener(
+            object : RecyclerView.OnScrollListener() {
             /*
             // When scroll down FAB disappears, when scroll up FAB appears
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
@@ -100,15 +102,19 @@ class MessagesActivity : AppCompatActivity() {
             }
              */
 
-            // When is dragging FAB disappears, when stops FAB appears
-            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
-                if (newState == RecyclerView.SCROLL_STATE_IDLE) {
-                    binding.floatingActionButton.show()
-                } else {
-                    binding.floatingActionButton.hide()
+                // When is dragging FAB disappears, when stops FAB appears
+                override fun onScrollStateChanged(
+                    recyclerView: RecyclerView,
+                    newState: Int,
+                ) {
+                    if (newState == RecyclerView.SCROLL_STATE_IDLE) {
+                        binding.floatingActionButton.show()
+                    } else {
+                        binding.floatingActionButton.hide()
+                    }
                 }
-            }
-        })
+            },
+        )
 
         binding.cardRecyclerView.layoutManager = LinearLayoutManager(this)
         binding.cardRecyclerView.adapter = ContactsAdapter(favContacts)

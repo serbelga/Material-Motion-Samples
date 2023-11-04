@@ -47,19 +47,20 @@ class PlanetsActivity : AppCompatActivity() {
 
     private fun setRecyclerView() {
         val adapter = StepAdapter(planets)
-        adapter.stepClickListener = object : StepAdapter.StepClickListener {
-            override fun onStepClick(position: Int) {
-                val forward = position >= selected
-                selected = position
-                val previousFragment = supportFragmentManager.findFragmentByTag(FRAGMENT_TAG)
-                previousFragment?.exitTransition = buildTransition(forward)
-                val fragment = PlanetFragment.newInstance(planets[selected].id)
-                fragment.enterTransition = buildTransition(forward)
-                supportFragmentManager.commit {
-                    replace(R.id.fragment_container, fragment, FRAGMENT_TAG)
+        adapter.stepClickListener =
+            object : StepAdapter.StepClickListener {
+                override fun onStepClick(position: Int) {
+                    val forward = position >= selected
+                    selected = position
+                    val previousFragment = supportFragmentManager.findFragmentByTag(FRAGMENT_TAG)
+                    previousFragment?.exitTransition = buildTransition(forward)
+                    val fragment = PlanetFragment.newInstance(planets[selected].id)
+                    fragment.enterTransition = buildTransition(forward)
+                    supportFragmentManager.commit {
+                        replace(R.id.fragment_container, fragment, FRAGMENT_TAG)
+                    }
                 }
             }
-        }
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = adapter
     }

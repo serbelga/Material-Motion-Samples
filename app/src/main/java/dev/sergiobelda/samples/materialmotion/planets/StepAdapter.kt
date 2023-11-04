@@ -26,23 +26,26 @@ class StepAdapter(val items: List<Any>) : RecyclerView.Adapter<StepAdapter.ViewH
     lateinit var stepClickListener: StepClickListener
     private var selected = 0
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        ViewHolder(
-            ItemStepBinding.inflate(
-                LayoutInflater.from(parent.context),
-                parent,
-                false,
-            ),
-        )
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int,
+    ) = ViewHolder(
+        ItemStepBinding.inflate(
+            LayoutInflater.from(parent.context),
+            parent,
+            false,
+        ),
+    )
 
     override fun getItemCount() = items.size
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(position)
+    override fun onBindViewHolder(
+        holder: ViewHolder,
+        position: Int,
+    ) = holder.bind(position)
 
     inner class ViewHolder(val binding: ItemStepBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(
-            position: Int,
-        ) {
+        fun bind(position: Int) {
             if (position == items.size - 1) {
                 binding.separator.visibility = View.GONE
             } else {

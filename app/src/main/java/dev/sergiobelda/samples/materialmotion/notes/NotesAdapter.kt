@@ -26,18 +26,23 @@ class NotesAdapter(private val items: List<Note>) :
     RecyclerView.Adapter<NotesAdapter.ViewHolder>() {
     lateinit var noteClickListener: NoteClickListener
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        ViewHolder(
-            ItemNoteBinding.inflate(
-                LayoutInflater.from(parent.context),
-                parent,
-                false,
-            ),
-        )
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int,
+    ) = ViewHolder(
+        ItemNoteBinding.inflate(
+            LayoutInflater.from(parent.context),
+            parent,
+            false,
+        ),
+    )
 
     override fun getItemCount() = items.size
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(items[position])
+    override fun onBindViewHolder(
+        holder: ViewHolder,
+        position: Int,
+    ) = holder.bind(items[position])
 
     inner class ViewHolder(val binding: ItemNoteBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(note: Note) {
@@ -50,6 +55,9 @@ class NotesAdapter(private val items: List<Note>) :
     }
 
     interface NoteClickListener {
-        fun onNoteClick(id: Int, noteCard: MaterialCardView)
+        fun onNoteClick(
+            id: Int,
+            noteCard: MaterialCardView,
+        )
     }
 }

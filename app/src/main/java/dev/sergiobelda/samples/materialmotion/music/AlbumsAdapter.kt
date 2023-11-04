@@ -40,23 +40,25 @@ class AlbumsAdapter(private val items: List<Album>, private val context: Context
             Glide.with(context)
                 .asBitmap()
                 .load(album.image)
-                .into(object : CustomTarget<Bitmap>() {
-                    override fun onResourceReady(
-                        resource: Bitmap,
-                        transition: Transition<in Bitmap>?,
-                    ) {
-                        val palette = Palette.from(resource).generate()
-                        palette.darkVibrantSwatch?.let {
-                            binding.albumCard.setCardBackgroundColor(it.rgb)
-                            val color = context.getColor(R.color.colorOnPrimary)
-                            binding.albumName.setTextColor(color)
-                        } ?: palette.lightVibrantSwatch?.let {
-                            binding.albumCard.setCardBackgroundColor(it.rgb)
+                .into(
+                    object : CustomTarget<Bitmap>() {
+                        override fun onResourceReady(
+                            resource: Bitmap,
+                            transition: Transition<in Bitmap>?,
+                        ) {
+                            val palette = Palette.from(resource).generate()
+                            palette.darkVibrantSwatch?.let {
+                                binding.albumCard.setCardBackgroundColor(it.rgb)
+                                val color = context.getColor(R.color.colorOnPrimary)
+                                binding.albumName.setTextColor(color)
+                            } ?: palette.lightVibrantSwatch?.let {
+                                binding.albumCard.setCardBackgroundColor(it.rgb)
+                            }
                         }
-                    }
 
-                    override fun onLoadCleared(placeholder: Drawable?) {}
-                })
+                        override fun onLoadCleared(placeholder: Drawable?) {}
+                    },
+                )
             binding.albumCard.transitionName = album.id.toString()
             binding.albumCard.setOnClickListener {
                 albumClickListener.onAlbumClick(album.id, binding.albumCard)
@@ -64,20 +66,28 @@ class AlbumsAdapter(private val items: List<Album>, private val context: Context
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        ViewHolder(
-            ItemAlbumBinding.inflate(
-                LayoutInflater.from(parent.context),
-                parent,
-                false,
-            ),
-        )
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int,
+    ) = ViewHolder(
+        ItemAlbumBinding.inflate(
+            LayoutInflater.from(parent.context),
+            parent,
+            false,
+        ),
+    )
 
     override fun getItemCount() = items.size
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(items[position])
+    override fun onBindViewHolder(
+        holder: ViewHolder,
+        position: Int,
+    ) = holder.bind(items[position])
 
     interface AlbumClickListener {
-        fun onAlbumClick(id: Int, cardView: MaterialCardView)
+        fun onAlbumClick(
+            id: Int,
+            cardView: MaterialCardView,
+        )
     }
 }

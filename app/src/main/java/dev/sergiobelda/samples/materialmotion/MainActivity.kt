@@ -33,13 +33,15 @@ class MainActivity : AppCompatActivity() {
         binding = MainActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val samplesAdapter = SamplesAdapter(samples).apply {
-            listener = object : SamplesAdapter.OnSampleClickListener {
-                override fun onSampleClick(sampleItem: SampleItem) {
-                    startActivity(Intent(this@MainActivity, sampleItem.activity))
-                }
+        val samplesAdapter =
+            SamplesAdapter(samples).apply {
+                listener =
+                    object : SamplesAdapter.OnSampleClickListener {
+                        override fun onSampleClick(sampleItem: SampleItem) {
+                            startActivity(Intent(this@MainActivity, sampleItem.activity))
+                        }
+                    }
             }
-        }
         binding.recyclerView.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
             adapter = samplesAdapter

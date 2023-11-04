@@ -29,9 +29,10 @@ private const val COUNT = 3
 class WalkthroughActivity : AppCompatActivity() {
     private lateinit var binding: WalkthroughActivityBinding
 
-    private var selected = MutableLiveData<Int>().apply {
-        value = 0
-    }
+    private var selected =
+        MutableLiveData<Int>().apply {
+            value = 0
+        }
 
     private val titles by lazy {
         arrayListOf(
@@ -49,11 +50,12 @@ class WalkthroughActivity : AppCompatActivity() {
         )
     }
 
-    private val images = arrayListOf(
-        R.drawable.undraw_drag,
-        R.drawable.undraw_social_sharing,
-        R.drawable.undraw_winners,
-    )
+    private val images =
+        arrayListOf(
+            R.drawable.undraw_drag,
+            R.drawable.undraw_social_sharing,
+            R.drawable.undraw_winners,
+        )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,11 +63,12 @@ class WalkthroughActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         selected.value?.let {
-            val fragment = WalkthroughFragment.newInstance(
-                titles[it],
-                bodies[it],
-                images[it],
-            )
+            val fragment =
+                WalkthroughFragment.newInstance(
+                    titles[it],
+                    bodies[it],
+                    images[it],
+                )
             supportFragmentManager.commit {
                 add(R.id.fragment_container, fragment, FRAGMENT_TAG)
             }
@@ -115,11 +118,12 @@ class WalkthroughActivity : AppCompatActivity() {
         selected.value?.let {
             val previousFragment = supportFragmentManager.findFragmentByTag(FRAGMENT_TAG)
             previousFragment?.exitTransition = buildTransition(forward)
-            val fragment = WalkthroughFragment.newInstance(
-                titles[it],
-                bodies[it],
-                images[it],
-            )
+            val fragment =
+                WalkthroughFragment.newInstance(
+                    titles[it],
+                    bodies[it],
+                    images[it],
+                )
             fragment.enterTransition = buildTransition(forward)
             supportFragmentManager.commit {
                 replace(R.id.fragment_container, fragment, FRAGMENT_TAG)

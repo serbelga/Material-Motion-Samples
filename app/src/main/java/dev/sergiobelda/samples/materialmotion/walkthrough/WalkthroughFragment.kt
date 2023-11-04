@@ -59,7 +59,10 @@ class WalkthroughFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(
+        view: View,
+        savedInstanceState: Bundle?,
+    ) {
         super.onViewCreated(view, savedInstanceState)
         binding.titleTextView.text = title
         binding.bodyTextView.text = body
@@ -81,13 +84,17 @@ class WalkthroughFragment : Fragment() {
          * @return A new instance of fragment WalkthroughFragment.
          */
         @JvmStatic
-        fun newInstance(title: String, body: String, @DrawableRes imageRes: Int) =
-            WalkthroughFragment().apply {
-                arguments = Bundle().apply {
+        fun newInstance(
+            title: String,
+            body: String,
+            @DrawableRes imageRes: Int,
+        ) = WalkthroughFragment().apply {
+            arguments =
+                Bundle().apply {
                     putString(ARG_TITLE, title)
                     putString(ARG_BODY, body)
                     putInt(ARG_DRAWABLE_RES, imageRes)
                 }
-            }
+        }
     }
 }

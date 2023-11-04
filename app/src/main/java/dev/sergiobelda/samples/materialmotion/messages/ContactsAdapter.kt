@@ -23,19 +23,23 @@ import dev.sergiobelda.samples.materialmotion.databinding.ItemContactBinding
 
 class ContactsAdapter(private val items: List<Contact>) :
     RecyclerView.Adapter<ContactsAdapter.ViewHolder>() {
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        ViewHolder(
-            ItemContactBinding.inflate(
-                LayoutInflater.from(parent.context),
-                parent,
-                false,
-            ),
-        )
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int,
+    ) = ViewHolder(
+        ItemContactBinding.inflate(
+            LayoutInflater.from(parent.context),
+            parent,
+            false,
+        ),
+    )
 
     override fun getItemCount() = items.size
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(items[position])
+    override fun onBindViewHolder(
+        holder: ViewHolder,
+        position: Int,
+    ) = holder.bind(items[position])
 
     inner class ViewHolder(val binding: ItemContactBinding) :
         RecyclerView.ViewHolder(binding.root) {

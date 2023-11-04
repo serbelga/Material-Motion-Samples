@@ -46,18 +46,23 @@ class NotesActivity : AppCompatActivity() {
 
     private fun setRecyclerView() {
         val adapter = NotesAdapter(notes)
-        adapter.noteClickListener = object : NotesAdapter.NoteClickListener {
-            override fun onNoteClick(id: Int, noteCard: MaterialCardView) {
-                val intent = Intent(this@NotesActivity, NoteDetailActivity::class.java)
-                val options = ActivityOptionsCompat.makeSceneTransitionAnimation(
-                    this@NotesActivity,
-                    noteCard,
-                    id.toString(),
-                )
-                intent.putExtra("noteId", id)
-                startActivity(intent, options.toBundle())
+        adapter.noteClickListener =
+            object : NotesAdapter.NoteClickListener {
+                override fun onNoteClick(
+                    id: Int,
+                    noteCard: MaterialCardView,
+                ) {
+                    val intent = Intent(this@NotesActivity, NoteDetailActivity::class.java)
+                    val options =
+                        ActivityOptionsCompat.makeSceneTransitionAnimation(
+                            this@NotesActivity,
+                            noteCard,
+                            id.toString(),
+                        )
+                    intent.putExtra("noteId", id)
+                    startActivity(intent, options.toBundle())
+                }
             }
-        }
         binding.recyclerView.layoutManager = GridLayoutManager(this, 2)
         binding.recyclerView.adapter = adapter
     }
@@ -65,11 +70,12 @@ class NotesActivity : AppCompatActivity() {
     private fun setClickListeners() {
         binding.addNoteFab.setOnClickListener {
             val intent = Intent(this, AddNoteActivity::class.java)
-            val options = ActivityOptionsCompat.makeSceneTransitionAnimation(
-                this,
-                binding.addNoteFab,
-                "shared_element_end_root",
-            )
+            val options =
+                ActivityOptionsCompat.makeSceneTransitionAnimation(
+                    this,
+                    binding.addNoteFab,
+                    "shared_element_end_root",
+                )
             startActivity(intent, options.toBundle())
         }
     }

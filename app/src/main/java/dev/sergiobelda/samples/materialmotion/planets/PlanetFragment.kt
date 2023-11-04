@@ -54,7 +54,10 @@ class PlanetFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(
+        view: View,
+        savedInstanceState: Bundle?,
+    ) {
         super.onViewCreated(view, savedInstanceState)
         val planet = planets.singleOrNull { it.id == planetId }
         planet?.let {
@@ -70,9 +73,10 @@ class PlanetFragment : Fragment() {
         @JvmStatic
         fun newInstance(planetId: Int) =
             PlanetFragment().apply {
-                arguments = Bundle().apply {
-                    putInt(ARG_PLANET_ID, planetId)
-                }
+                arguments =
+                    Bundle().apply {
+                        putInt(ARG_PLANET_ID, planetId)
+                    }
             }
     }
 }
