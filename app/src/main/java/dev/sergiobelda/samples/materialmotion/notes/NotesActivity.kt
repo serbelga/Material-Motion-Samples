@@ -20,6 +20,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.Window
+import android.window.OnBackInvokedDispatcher
+import androidx.activity.OnBackPressedDispatcher
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityOptionsCompat
 import androidx.recyclerview.widget.GridLayoutManager
@@ -83,16 +85,12 @@ class NotesActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             android.R.id.home -> {
-                onBackPressed()
+                onBackPressedDispatcher.onBackPressed()
                 true
             }
             else -> {
                 true
             }
         }
-    }
-
-    override fun onBackPressed() {
-        finish()
     }
 }

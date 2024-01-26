@@ -17,11 +17,16 @@
 import com.diffplug.gradle.spotless.SpotlessExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.kotlin.dsl.configure
+import org.gradle.kotlin.dsl.getByType
 
 class SpotlessConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
+            val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
+            val ktlintVersion = libs.findVersion("ktlint").get().toString()
+
             pluginManager.apply("com.diffplug.spotless")
 
             extensions.configure<SpotlessExtension> {
@@ -31,7 +36,7 @@ class SpotlessConventionPlugin : Plugin<Project> {
                     licenseHeaderFile(rootProject.file("spotless/copyright.kt"))
 
                     // ktlint
-                    ktlint()
+                    ktlint(ktlintVersion)
                 }
                 format("kts") {
                     target("**/*.kts")
