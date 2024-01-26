@@ -32,7 +32,6 @@ class SpotlessConventionPlugin : Plugin<Project> {
 
                     // ktlint
                     ktlint()
-                        .userData(mapOf("android" to "true"))
                 }
                 format("kts") {
                     target("**/*.kts")
