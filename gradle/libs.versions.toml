@@ -1,5 +1,5 @@
 [versions]
-androidCore = "1.13.0"
+androidCore = "1.13.1"
 androidGradlePlugin = "8.4.0"
 androidTestJunit = "1.1.5"
 appcompat = "1.6.1"
