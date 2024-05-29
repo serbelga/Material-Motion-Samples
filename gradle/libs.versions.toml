@@ -2,7 +2,7 @@
 androidCore = "1.13.1"
 androidGradlePlugin = "8.4.1"
 androidTestJunit = "1.1.5"
-appcompat = "1.6.1"
+appcompat = "1.7.0"
 constraintlayout = "2.1.4"
 espresso = "3.5.1"
 glide = "4.16.0"
