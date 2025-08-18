@@ -1,6 +1,6 @@
 [versions]
 androidCore = "1.16.0"
-androidGradlePlugin = "8.12.0"
+androidGradlePlugin = "8.12.1"
 androidTestJunit = "1.3.0"
 appcompat = "1.7.1"
 constraintlayout = "2.2.1"
