@@ -21,7 +21,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import dev.sergiobelda.samples.materialmotion.databinding.ItemArtistBinding
 
-class ArtistsAdapter(var items: List<Artist>) : RecyclerView.Adapter<ArtistsAdapter.ViewHolder>() {
+class ArtistsAdapter(
+    var items: List<Artist>,
+) : RecyclerView.Adapter<ArtistsAdapter.ViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int,
@@ -40,7 +42,9 @@ class ArtistsAdapter(var items: List<Artist>) : RecyclerView.Adapter<ArtistsAdap
         position: Int,
     ) = holder.bind(items[position])
 
-    inner class ViewHolder(var binding: ItemArtistBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(
+        var binding: ItemArtistBinding,
+    ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(artist: Artist) {
             binding.artist = artist
         }

@@ -21,8 +21,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import dev.sergiobelda.samples.materialmotion.databinding.ItemSampleBinding
 
-class SamplesAdapter(private val items: List<SampleItem>) :
-    RecyclerView.Adapter<SamplesAdapter.ViewHolder>() {
+class SamplesAdapter(
+    private val items: List<SampleItem>,
+) : RecyclerView.Adapter<SamplesAdapter.ViewHolder>() {
     var listener: OnSampleClickListener? = null
 
     override fun onCreateViewHolder(
@@ -43,8 +44,9 @@ class SamplesAdapter(private val items: List<SampleItem>) :
         position: Int,
     ) = holder.bind(items[position])
 
-    inner class ViewHolder(val binding: ItemSampleBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(
+        val binding: ItemSampleBinding,
+    ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(sampleItem: SampleItem) {
             binding.sample = sampleItem
             binding.button.setOnClickListener {

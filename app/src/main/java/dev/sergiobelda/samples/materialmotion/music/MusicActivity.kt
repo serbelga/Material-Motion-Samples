@@ -44,6 +44,7 @@ class MusicActivity : AppCompatActivity() {
                     binding.appbarLayout.setExpanded(false, true)
                     binding.bottomNavigationView.visibility = View.GONE
                 }
+
                 else -> {
                     binding.appbarLayout.setExpanded(true, true)
                     binding.bottomNavigationView.visibility = View.VISIBLE
@@ -58,6 +59,9 @@ class MusicActivity : AppCompatActivity() {
                 onBackPressedDispatcher.onBackPressed()
                 true
             }
-            else -> true
+
+            else -> {
+                true
+            }
         }
 }

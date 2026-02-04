@@ -21,8 +21,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import dev.sergiobelda.samples.materialmotion.databinding.ItemMessageBinding
 
-class MessagesAdapter(val items: List<Message>) :
-    RecyclerView.Adapter<MessagesAdapter.ViewHolder>() {
+class MessagesAdapter(
+    val items: List<Message>,
+) : RecyclerView.Adapter<MessagesAdapter.ViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int,
@@ -41,8 +42,9 @@ class MessagesAdapter(val items: List<Message>) :
         position: Int,
     ) = holder.bind(items[position])
 
-    inner class ViewHolder(val binding: ItemMessageBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(
+        val binding: ItemMessageBinding,
+    ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(message: Message) {
             binding.message = message
         }

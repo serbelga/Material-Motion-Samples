@@ -24,6 +24,7 @@ import com.bumptech.glide.Glide
 fun imageUrl(
     imageView: ImageView,
     url: String,
-) = Glide.with(imageView)
+) = Glide
+    .with(imageView)
     .load(url)
     .into(imageView)

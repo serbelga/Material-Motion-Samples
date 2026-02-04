@@ -30,14 +30,19 @@ import com.google.android.material.card.MaterialCardView
 import dev.sergiobelda.samples.materialmotion.R
 import dev.sergiobelda.samples.materialmotion.databinding.ItemAlbumBinding
 
-class AlbumsAdapter(private val items: List<Album>, private val context: Context) :
-    RecyclerView.Adapter<AlbumsAdapter.ViewHolder>() {
+class AlbumsAdapter(
+    private val items: List<Album>,
+    private val context: Context,
+) : RecyclerView.Adapter<AlbumsAdapter.ViewHolder>() {
     lateinit var albumClickListener: AlbumClickListener
 
-    inner class ViewHolder(val binding: ItemAlbumBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(
+        val binding: ItemAlbumBinding,
+    ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(album: Album) {
             binding.album = album
-            Glide.with(context)
+            Glide
+                .with(context)
                 .asBitmap()
                 .load(album.image)
                 .into(

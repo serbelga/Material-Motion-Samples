@@ -22,8 +22,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.card.MaterialCardView
 import dev.sergiobelda.samples.materialmotion.databinding.ItemNoteBinding
 
-class NotesAdapter(private val items: List<Note>) :
-    RecyclerView.Adapter<NotesAdapter.ViewHolder>() {
+class NotesAdapter(
+    private val items: List<Note>,
+) : RecyclerView.Adapter<NotesAdapter.ViewHolder>() {
     lateinit var noteClickListener: NoteClickListener
 
     override fun onCreateViewHolder(
@@ -44,7 +45,9 @@ class NotesAdapter(private val items: List<Note>) :
         position: Int,
     ) = holder.bind(items[position])
 
-    inner class ViewHolder(val binding: ItemNoteBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(
+        val binding: ItemNoteBinding,
+    ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(note: Note) {
             binding.note = note
             binding.noteCard.transitionName = note.id.toString()

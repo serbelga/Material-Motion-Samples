@@ -22,7 +22,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import dev.sergiobelda.samples.materialmotion.databinding.ItemStepBinding
 
-class StepAdapter(val items: List<Any>) : RecyclerView.Adapter<StepAdapter.ViewHolder>() {
+class StepAdapter(
+    val items: List<Any>,
+) : RecyclerView.Adapter<StepAdapter.ViewHolder>() {
     lateinit var stepClickListener: StepClickListener
     private var selected = 0
 
@@ -44,7 +46,9 @@ class StepAdapter(val items: List<Any>) : RecyclerView.Adapter<StepAdapter.ViewH
         position: Int,
     ) = holder.bind(position)
 
-    inner class ViewHolder(val binding: ItemStepBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(
+        val binding: ItemStepBinding,
+    ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(position: Int) {
             if (position == items.size - 1) {
                 binding.separator.visibility = View.GONE

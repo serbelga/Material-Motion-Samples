@@ -9,11 +9,11 @@ glide = "5.0.5"
 junit = "4.13.2"
 kotlin = "2.3.0"
 ksp = "2.3.5"
-ktlint = "0.50.0"
+ktlint = "1.8.0"
 material = "1.13.0"
 navigation = "2.9.7"
 palette = "1.0.0"
-spotless = "8.0.0"
+spotless = "8.2.1"
 
 [libraries]
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }

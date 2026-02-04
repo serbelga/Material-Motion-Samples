@@ -59,7 +59,8 @@ class AlbumFragment : Fragment() {
         val album = albums.find { it.id == args.albumId }
         binding.album = album
 
-        Glide.with(requireContext())
+        Glide
+            .with(requireContext())
             .asBitmap()
             .load(album?.image)
             .into(
